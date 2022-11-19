@@ -222,18 +222,21 @@ namespace Intel_8086
             resources.ApplyResources(this.Clear, "Clear");
             this.Clear.Name = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // RUN
             // 
             resources.ApplyResources(this.RUN, "RUN");
             this.RUN.Name = "RUN";
             this.RUN.UseVisualStyleBackColor = true;
+            this.RUN.Click += new System.EventHandler(this.RUN_Click);
             // 
             // Operation
             // 
             this.Operation.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.Operation, "Operation");
             this.Operation.Name = "Operation";
+            this.Operation.TextChanged += new System.EventHandler(this.Operation_TextChanged);
             // 
             // Instruction
             // 
@@ -241,6 +244,7 @@ namespace Intel_8086
             resources.ApplyResources(this.Instruction, "Instruction");
             this.Instruction.Name = "Instruction";
             this.Instruction.ReadOnly = true;
+            this.Instruction.TextChanged += new System.EventHandler(this.Instruction_TextChanged);
             // 
             // CMP
             // 
@@ -524,24 +528,28 @@ namespace Intel_8086
             resources.ApplyResources(this.SAHF, "SAHF");
             this.SAHF.Name = "SAHF";
             this.SAHF.UseVisualStyleBackColor = true;
+            this.SAHF.Click += new System.EventHandler(this.SAHF_Click);
             // 
             // LAHF
             // 
             resources.ApplyResources(this.LAHF, "LAHF");
             this.LAHF.Name = "LAHF";
             this.LAHF.UseVisualStyleBackColor = true;
+            this.LAHF.Click += new System.EventHandler(this.LAHF_Click);
             // 
             // LEA
             // 
             resources.ApplyResources(this.LEA, "LEA");
             this.LEA.Name = "LEA";
             this.LEA.UseVisualStyleBackColor = true;
+            this.LEA.Click += new System.EventHandler(this.LEA_Click);
             // 
             // POPF
             // 
             resources.ApplyResources(this.POPF, "POPF");
             this.POPF.Name = "POPF";
             this.POPF.UseVisualStyleBackColor = true;
+            this.POPF.Click += new System.EventHandler(this.POPF_Click);
             // 
             // PUSHF
             // 
@@ -555,24 +563,28 @@ namespace Intel_8086
             resources.ApplyResources(this.POP, "POP");
             this.POP.Name = "POP";
             this.POP.UseVisualStyleBackColor = true;
+            this.POP.Click += new System.EventHandler(this.POP_Click);
             // 
             // PUSH
             // 
             resources.ApplyResources(this.PUSH, "PUSH");
             this.PUSH.Name = "PUSH";
             this.PUSH.UseVisualStyleBackColor = true;
+            this.PUSH.Click += new System.EventHandler(this.PUSH_Click);
             // 
             // XCHG
             // 
             resources.ApplyResources(this.XCHG, "XCHG");
             this.XCHG.Name = "XCHG";
             this.XCHG.UseVisualStyleBackColor = true;
+            this.XCHG.Click += new System.EventHandler(this.XCHG_Click);
             // 
             // MOV
             // 
             resources.ApplyResources(this.MOV, "MOV");
             this.MOV.Name = "MOV";
             this.MOV.UseVisualStyleBackColor = true;
+            this.MOV.Click += new System.EventHandler(this.MOV_Click);
             // 
             // label2
             // 
@@ -601,60 +613,70 @@ namespace Intel_8086
             resources.ApplyResources(this.IDIV, "IDIV");
             this.IDIV.Name = "IDIV";
             this.IDIV.UseVisualStyleBackColor = true;
+            this.IDIV.Click += new System.EventHandler(this.IDIV_Click);
             // 
             // IMUL
             // 
             resources.ApplyResources(this.IMUL, "IMUL");
             this.IMUL.Name = "IMUL";
             this.IMUL.UseVisualStyleBackColor = true;
+            this.IMUL.Click += new System.EventHandler(this.IMUL_Click);
             // 
             // AAS
             // 
             resources.ApplyResources(this.AAS, "AAS");
             this.AAS.Name = "AAS";
             this.AAS.UseVisualStyleBackColor = true;
+            this.AAS.Click += new System.EventHandler(this.AAS_Click);
             // 
             // AAA
             // 
             resources.ApplyResources(this.AAA, "AAA");
             this.AAA.Name = "AAA";
             this.AAA.UseVisualStyleBackColor = true;
+            this.AAA.Click += new System.EventHandler(this.AAA_Click);
             // 
             // DEC
             // 
             resources.ApplyResources(this.DEC, "DEC");
             this.DEC.Name = "DEC";
             this.DEC.UseVisualStyleBackColor = true;
+            this.DEC.Click += new System.EventHandler(this.DEC_Click);
             // 
             // INC
             // 
             resources.ApplyResources(this.INC, "INC");
             this.INC.Name = "INC";
             this.INC.UseVisualStyleBackColor = true;
+            this.INC.Click += new System.EventHandler(this.INC_Click);
             // 
             // DIV
             // 
             resources.ApplyResources(this.DIV, "DIV");
             this.DIV.Name = "DIV";
             this.DIV.UseVisualStyleBackColor = true;
+            this.DIV.Click += new System.EventHandler(this.DIV_Click);
             // 
             // MUL
             // 
             resources.ApplyResources(this.MUL, "MUL");
             this.MUL.Name = "MUL";
             this.MUL.UseVisualStyleBackColor = true;
+            this.MUL.Click += new System.EventHandler(this.MUL_Click);
             // 
             // SUB
             // 
             resources.ApplyResources(this.SUB, "SUB");
             this.SUB.Name = "SUB";
             this.SUB.UseVisualStyleBackColor = true;
+            this.SUB.Click += new System.EventHandler(this.SUB_Click);
             // 
             // ADD
             // 
             resources.ApplyResources(this.ADD, "ADD");
             this.ADD.Name = "ADD";
             this.ADD.UseVisualStyleBackColor = true;
+            this.ADD.Click += new System.EventHandler(this.ADD_Click);
             // 
             // tabPage2
             // 
@@ -668,6 +690,7 @@ namespace Intel_8086
             resources.ApplyResources(this.Stack_box, "Stack_box");
             this.Stack_box.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Stack_box.Name = "Stack_box";
+            this.Stack_box.TextChanged += new System.EventHandler(this.Stack_box_TextChanged);
             // 
             // label10
             // 
