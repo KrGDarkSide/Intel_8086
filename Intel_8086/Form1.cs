@@ -12,7 +12,7 @@ namespace Intel_8086
 {
     public partial class Int_8086 : Form
     {
-        // REGISTERS
+        // REGISTERS:
 
         // AX
         byte AH = 0;
@@ -35,6 +35,29 @@ namespace Intel_8086
         short SI = 0;
         short DI = 0;
 
+        // SEGMENT REGISTERS:
+
+        short CS = 0;
+        short DS = 0;
+        short SS = 0;
+        short ES = 0;
+        short IP = 0;
+        short FLAGS = 0;
+
+        // FLAGS
+
+        bool SF = false;
+        bool ZF = false;
+        bool PF = false;
+        bool AF = false;
+        bool CF = false;
+        bool OF = false;
+        bool IF = false;
+        bool DF = false;
+        bool TF = false;
+
+        Stack<short> the_stack = new Stack<short>();
+
         public Int_8086()
         {
             InitializeComponent();
@@ -44,7 +67,7 @@ namespace Intel_8086
         
 // DATA TRANSFER INSTRUCTIONS:
 
-        // MOV
+        // MOV --> =
         private void MOV_Click(object sender, EventArgs e)
         {
             Instruction.Text = "MOV";
@@ -430,19 +453,35 @@ namespace Intel_8086
             else
             {
                 string inst = Instruction.Text;
-                string ops_inputV = Operation.Text;
+                string ops_input = (Operation.Text).Replace(" ", "");
+
                 List<string> ops = new List<string>();
+                string x = "";      // helping variable
 
-                string x = "";
-
-                for (int i = 0; i < ops_inputV.Length; i++)
+                for (int i = 0; i < ops_input.Length; i++)
                 {
-                    if (ops_inputV[i] == ';' || ops_inputV[i] == ',' || ops_inputV[i] == ' ')
+                    if (ops_input[i] != ';')
                     {
-                        ops.Add(x);
+                        if (ops_input[i] == ',')
+                        {
+                            ops.Add(x);
+                            x = "";
+                        }
+                        else
+                        {
+                            x += ops_input[i];
+                        }
                     }
+                    else { break; }
                 }
+
+                ops.Add(x);
+                x = "";
             }
+
+
+            Instruction.Text = "";
+            Operation.Text = "";
         }
 
         // Clear Button
@@ -471,15 +510,19 @@ namespace Intel_8086
                 case "MOV":
 
                     break;
+
                 case "PUSH":
+                    //the_stack.Push(Convert.ToInt16(ops[0]));
 
                     break;
                 case "PUSHF":
 
                     break;
-                case "POP":
 
+                case "POP":
+                    the_stack.Pop();
                     break;
+
                 case "POPF":
 
                     break;
@@ -530,6 +573,17 @@ namespace Intel_8086
                     break;
             }
         }
+
+        //private void Register_sercher(string regd, byte AH, byte AL, byte BH, byte BL, byte CH, byte CL, byte DH, byte DL, short SP, short BP, short SI, short DI, short CS, short DS, short SS, short ES, short IP, short FLAG)
+        //{
+        //    switch(regd)
+        //    {
+        //        case "AX":
+                    
+        //            break;
+
+        //    }
+        //}
     
     }
 }
