@@ -251,78 +251,91 @@ namespace Intel_8086
             resources.ApplyResources(this.CMP, "CMP");
             this.CMP.Name = "CMP";
             this.CMP.UseVisualStyleBackColor = true;
+            this.CMP.Click += new System.EventHandler(this.CMP_Click);
             // 
             // JMP
             // 
             resources.ApplyResources(this.JMP, "JMP");
             this.JMP.Name = "JMP";
             this.JMP.UseVisualStyleBackColor = true;
+            this.JMP.Click += new System.EventHandler(this.JMP_Click);
             // 
             // CALL
             // 
             resources.ApplyResources(this.CALL, "CALL");
             this.CALL.Name = "CALL";
             this.CALL.UseVisualStyleBackColor = true;
+            this.CALL.Click += new System.EventHandler(this.CALL_Click);
             // 
             // JNBE_JA
             // 
             resources.ApplyResources(this.JNBE_JA, "JNBE_JA");
             this.JNBE_JA.Name = "JNBE_JA";
             this.JNBE_JA.UseVisualStyleBackColor = true;
+            this.JNBE_JA.Click += new System.EventHandler(this.JNBE_JA_Click);
             // 
             // JNB_JAE
             // 
             resources.ApplyResources(this.JNB_JAE, "JNB_JAE");
             this.JNB_JAE.Name = "JNB_JAE";
             this.JNB_JAE.UseVisualStyleBackColor = true;
+            this.JNB_JAE.Click += new System.EventHandler(this.JNB_JAE_Click);
             // 
             // JNLE_JG
             // 
             resources.ApplyResources(this.JNLE_JG, "JNLE_JG");
             this.JNLE_JG.Name = "JNLE_JG";
             this.JNLE_JG.UseVisualStyleBackColor = true;
+            this.JNLE_JG.Click += new System.EventHandler(this.JNLE_JG_Click);
             // 
             // JNL_JGE
             // 
             resources.ApplyResources(this.JNL_JGE, "JNL_JGE");
             this.JNL_JGE.Name = "JNL_JGE";
             this.JNL_JGE.UseVisualStyleBackColor = true;
+            this.JNL_JGE.Click += new System.EventHandler(this.JNL_JGE_Click);
             // 
             // JNE_JNZ
             // 
             resources.ApplyResources(this.JNE_JNZ, "JNE_JNZ");
             this.JNE_JNZ.Name = "JNE_JNZ";
             this.JNE_JNZ.UseVisualStyleBackColor = true;
+            this.JNE_JNZ.Click += new System.EventHandler(this.JNE_JNZ_Click);
             // 
             // JBE_JNA
             // 
             resources.ApplyResources(this.JBE_JNA, "JBE_JNA");
             this.JBE_JNA.Name = "JBE_JNA";
             this.JBE_JNA.UseVisualStyleBackColor = true;
+            this.JBE_JNA.Click += new System.EventHandler(this.JBE_JNA_Click);
             // 
             // JB_JNAF
             // 
             resources.ApplyResources(this.JB_JNAF, "JB_JNAF");
             this.JB_JNAF.Name = "JB_JNAF";
             this.JB_JNAF.UseVisualStyleBackColor = true;
+            this.JB_JNAF.Click += new System.EventHandler(this.JB_JNAF_Click);
             // 
             // JLE_JNG
             // 
             resources.ApplyResources(this.JLE_JNG, "JLE_JNG");
             this.JLE_JNG.Name = "JLE_JNG";
             this.JLE_JNG.UseVisualStyleBackColor = true;
+            this.JLE_JNG.Click += new System.EventHandler(this.JLE_JNG_Click);
             // 
             // JL_JNEG
             // 
             resources.ApplyResources(this.JL_JNEG, "JL_JNEG");
             this.JL_JNEG.Name = "JL_JNEG";
             this.JL_JNEG.UseVisualStyleBackColor = true;
+            this.JL_JNEG.Click += new System.EventHandler(this.JL_JNEG_Click);
             // 
             // JE_JZ
             // 
             resources.ApplyResources(this.JE_JZ, "JE_JZ");
             this.JE_JZ.Name = "JE_JZ";
             this.JE_JZ.UseVisualStyleBackColor = true;
+            this.JE_JZ.Click += new System.EventHandler(this.JE_JZ_Click);
             // 
             // line5
             // 
@@ -340,24 +353,28 @@ namespace Intel_8086
             resources.ApplyResources(this.IRET, "IRET");
             this.IRET.Name = "IRET";
             this.IRET.UseVisualStyleBackColor = true;
+            this.IRET.Click += new System.EventHandler(this.IRET_Click);
             // 
             // RET
             // 
             resources.ApplyResources(this.RET, "RET");
             this.RET.Name = "RET";
             this.RET.UseVisualStyleBackColor = true;
+            this.RET.Click += new System.EventHandler(this.RET_Click);
             // 
             // INTO
             // 
             resources.ApplyResources(this.INTO, "INTO");
             this.INTO.Name = "INTO";
             this.INTO.UseVisualStyleBackColor = true;
+            this.INTO.Click += new System.EventHandler(this.INTO_Click);
             // 
             // INT
             // 
             resources.ApplyResources(this.INT, "INT");
             this.INT.Name = "INT";
             this.INT.UseVisualStyleBackColor = true;
+            this.INT.Click += new System.EventHandler(this.INT_Click);
             // 
             // Line4
             // 
@@ -375,12 +392,14 @@ namespace Intel_8086
             resources.ApplyResources(this.OUT, "OUT");
             this.OUT.Name = "OUT";
             this.OUT.UseVisualStyleBackColor = true;
+            this.OUT.Click += new System.EventHandler(this.OUT_Click);
             // 
             // IN
             // 
             resources.ApplyResources(this.IN, "IN");
             this.IN.Name = "IN";
             this.IN.UseVisualStyleBackColor = true;
+            this.IN.Click += new System.EventHandler(this.IN_Click);
             // 
             // label6
             // 
@@ -392,42 +411,49 @@ namespace Intel_8086
             resources.ApplyResources(this.CMC, "CMC");
             this.CMC.Name = "CMC";
             this.CMC.UseVisualStyleBackColor = true;
+            this.CMC.Click += new System.EventHandler(this.CMC_Click);
             // 
             // STI
             // 
             resources.ApplyResources(this.STI, "STI");
             this.STI.Name = "STI";
             this.STI.UseVisualStyleBackColor = true;
+            this.STI.Click += new System.EventHandler(this.STI_Click);
             // 
             // STD
             // 
             resources.ApplyResources(this.STD, "STD");
             this.STD.Name = "STD";
             this.STD.UseVisualStyleBackColor = true;
+            this.STD.Click += new System.EventHandler(this.STD_Click);
             // 
             // STC
             // 
             resources.ApplyResources(this.STC, "STC");
             this.STC.Name = "STC";
             this.STC.UseVisualStyleBackColor = true;
+            this.STC.Click += new System.EventHandler(this.STC_Click);
             // 
             // CLI
             // 
             resources.ApplyResources(this.CLI, "CLI");
             this.CLI.Name = "CLI";
             this.CLI.UseVisualStyleBackColor = true;
+            this.CLI.Click += new System.EventHandler(this.CLI_Click);
             // 
             // CLD
             // 
             resources.ApplyResources(this.CLD, "CLD");
             this.CLD.Name = "CLD";
             this.CLD.UseVisualStyleBackColor = true;
+            this.CLD.Click += new System.EventHandler(this.CLD_Click);
             // 
             // CLC
             // 
             resources.ApplyResources(this.CLC, "CLC");
             this.CLC.Name = "CLC";
             this.CLC.UseVisualStyleBackColor = true;
+            this.CLC.Click += new System.EventHandler(this.CLC_Click);
             // 
             // label5
             // 
@@ -439,78 +465,91 @@ namespace Intel_8086
             resources.ApplyResources(this.TEST, "TEST");
             this.TEST.Name = "TEST";
             this.TEST.UseVisualStyleBackColor = true;
+            this.TEST.Click += new System.EventHandler(this.TEST_Click);
             // 
             // RCR
             // 
             resources.ApplyResources(this.RCR, "RCR");
             this.RCR.Name = "RCR";
             this.RCR.UseVisualStyleBackColor = true;
+            this.RCR.Click += new System.EventHandler(this.RCR_Click);
             // 
             // RCL
             // 
             resources.ApplyResources(this.RCL, "RCL");
             this.RCL.Name = "RCL";
             this.RCL.UseVisualStyleBackColor = true;
+            this.RCL.Click += new System.EventHandler(this.RCL_Click);
             // 
             // ROR
             // 
             resources.ApplyResources(this.ROR, "ROR");
             this.ROR.Name = "ROR";
             this.ROR.UseVisualStyleBackColor = true;
+            this.ROR.Click += new System.EventHandler(this.ROR_Click);
             // 
             // ROL
             // 
             resources.ApplyResources(this.ROL, "ROL");
             this.ROL.Name = "ROL";
             this.ROL.UseVisualStyleBackColor = true;
+            this.ROL.Click += new System.EventHandler(this.ROL_Click);
             // 
             // SAR
             // 
             resources.ApplyResources(this.SAR, "SAR");
             this.SAR.Name = "SAR";
             this.SAR.UseVisualStyleBackColor = true;
+            this.SAR.Click += new System.EventHandler(this.SAR_Click);
             // 
             // SHR
             // 
             resources.ApplyResources(this.SHR, "SHR");
             this.SHR.Name = "SHR";
             this.SHR.UseVisualStyleBackColor = true;
+            this.SHR.Click += new System.EventHandler(this.SHR_Click);
             // 
             // SAL
             // 
             resources.ApplyResources(this.SAL, "SAL");
             this.SAL.Name = "SAL";
             this.SAL.UseVisualStyleBackColor = true;
+            this.SAL.Click += new System.EventHandler(this.SAL_Click);
             // 
             // SHL
             // 
             resources.ApplyResources(this.SHL, "SHL");
             this.SHL.Name = "SHL";
             this.SHL.UseVisualStyleBackColor = true;
+            this.SHL.Click += new System.EventHandler(this.SHL_Click);
             // 
             // XOR
             // 
             resources.ApplyResources(this.XOR, "XOR");
             this.XOR.Name = "XOR";
             this.XOR.UseVisualStyleBackColor = true;
+            this.XOR.Click += new System.EventHandler(this.XOR_Click);
             // 
             // OR
             // 
             resources.ApplyResources(this.OR, "OR");
             this.OR.Name = "OR";
             this.OR.UseVisualStyleBackColor = true;
+            this.OR.Click += new System.EventHandler(this.OR_Click);
             // 
             // AND
             // 
             resources.ApplyResources(this.AND, "AND");
             this.AND.Name = "AND";
             this.AND.UseVisualStyleBackColor = true;
+            this.AND.Click += new System.EventHandler(this.AND_Click);
             // 
             // NOT
             // 
             resources.ApplyResources(this.NOT, "NOT");
             this.NOT.Name = "NOT";
             this.NOT.UseVisualStyleBackColor = true;
+            this.NOT.Click += new System.EventHandler(this.NOT_Click);
             // 
             // label3
             // 

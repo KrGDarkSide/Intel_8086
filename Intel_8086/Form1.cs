@@ -13,7 +13,7 @@ namespace Intel_8086
     public partial class Int_8086 : Form
     {
         // REGISTERS
-        
+
         // AX
         byte AH = 0;
         byte AL = 0;
@@ -40,39 +40,9 @@ namespace Intel_8086
             InitializeComponent();
         }
 
-// Main block
 
-        // Instruction block
-        private void Instruction_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // Operations block
-        private void Operation_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // Run Button
-        private void RUN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Clear Button
-        private void Clear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // STACK --> shows the contents of the register 
-        private void Stack_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // DATA TRANSFER INSTRUCTIONS:
+        
+// DATA TRANSFER INSTRUCTIONS:
 
         // MOV
         private void MOV_Click(object sender, EventArgs e)
@@ -190,5 +160,376 @@ namespace Intel_8086
             Instruction.Text = "IDIV";
         }
 
+// LOGICAL INSTRUCTIONS:
+
+        // NOT
+        private void NOT_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "NOT";
+        }
+
+        // AND
+        private void AND_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "AND";
+        }
+
+        // OR
+        private void OR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "OR";
+        }
+
+        // XOR
+        private void XOR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "XOR";
+        }
+
+        // TEST
+        private void TEST_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "TEST";
+        }
+
+        // SHL
+        private void SHL_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "SHL";
+        }
+
+        // SHR
+        private void SHR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "SHR";
+        }
+
+        // SAL
+        private void SAL_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "SAL";
+        }
+
+        // SAR
+        private void SAR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "SAR";
+        }
+
+        // ROL
+        private void ROL_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "ROL";
+        }
+
+        // ROR
+        private void ROR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "ROR";
+        }
+
+        // RCL
+        private void RCL_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "RCL";
+        }
+
+        // RCR
+        private void RCR_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "RCR";
+        }
+
+// FLAGS MANIPULATION INSTRUCTIONS:
+
+        // CLC
+        private void CLC_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CLC";
+        }
+
+        // CLD
+        private void CLD_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CLD";
+        }
+
+        // CLI
+        private void CLI_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CLI";
+        }
+
+        // STC
+        private void STC_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "STC";
+        }
+
+        // STD
+        private void STD_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "STD";
+        }
+
+        // STI
+        private void STI_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "STI";
+        }
+
+        // CMC
+        private void CMC_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CMC";
+        }
+
+// JUMP INSTRUCTIONS:
+
+        // JE/JZ
+        private void JE_JZ_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JE/JZ";
+        }
+
+        // JL/JNEG
+        private void JL_JNEG_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JL/JNEG";
+        }
+
+        // JLE/JNG
+        private void JLE_JNG_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JLE/JNG";
+        }
+
+        // JB/JNAF
+        private void JB_JNAF_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JB/JNAF";
+        }
+
+        // JBE/JNA
+        private void JBE_JNA_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JBE/JNA";
+        }
+
+        // JNE/JNZ
+        private void JNE_JNZ_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JNE/JNZ";
+        }
+
+        // JNL/JGE
+        private void JNL_JGE_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JNL/JGE";
+        }
+
+        // JNLE/JG
+        private void JNLE_JG_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JNLE/JG";
+        }
+
+        // JNB/JAE
+        private void JNB_JAE_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JNB/JAE";
+        }
+
+        // JNBE/JA
+        private void JNBE_JA_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JNBE/JA";
+        }
+
+        // CALL
+        private void CALL_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CALL";
+        }
+
+        // JMP
+        private void JMP_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "JMP";
+        }
+
+        // CMP
+        private void CMP_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "CMP";
+        }
+
+// INTERRUPT INSTRUCTIONS:
+
+        // INT
+        private void INT_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "INT";
+        }
+
+        // INTO
+        private void INTO_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "INTO";
+        }
+
+        // RET
+        private void RET_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "RET";
+        }
+
+        // IRET
+        private void IRET_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "IRET";
+        }
+
+// ENTER & EXIT INSTRUCTIONS:
+
+        // IN
+        private void IN_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "IN";
+        }
+
+        // OUT
+        private void OUT_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "OUT";
+        }
+
+
+
+// Main block
+
+        // Instruction block
+        private void Instruction_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Operations block
+        private void Operation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Run Button
+        private void RUN_Click(object sender, EventArgs e)
+        {
+            if (Instruction.Text == "" || Operation.Text == "")
+            {
+                MessageBox.Show("Please,\nenter a instruction and operations!");
+            }
+            else
+            {
+                string inst = Instruction.Text;
+                string ops_inputV = Operation.Text;
+                List<string> ops = new List<string>();
+
+                string x = "";
+
+                for (int i = 0; i < ops_inputV.Length; i++)
+                {
+                    if (ops_inputV[i] == ';' || ops_inputV[i] == ',' || ops_inputV[i] == ' ')
+                    {
+                        ops.Add(x);
+                    }
+                }
+            }
+        }
+
+        // Clear Button
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Instruction.Text = "";
+            Operation.Text = "";
+        }
+
+        // STACK --> shows the contents of the register 
+        private void Stack_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+// Following tasks
+
+        private void Asm_operations(string inst, List<string> ops)
+        {
+            switch(inst)
+            {
+                // DATA TRANSFER
+
+                case "MOV":
+
+                    break;
+                case "PUSH":
+
+                    break;
+                case "PUSHF":
+
+                    break;
+                case "POP":
+
+                    break;
+                case "POPF":
+
+                    break;
+                case "XCHG":
+
+                    break;
+                case "LEA":
+
+                    break;
+                case "LAHF":
+
+                    break;
+                case "SAHF":
+
+                    break;
+
+                // ARITHMETIC
+
+                case "ADD":
+                     
+                    break;
+                case "SUB":
+
+                    break;
+                case "MUL":
+
+                    break;
+                case "DIV":
+
+                    break;
+                case "INC":
+
+                    break;
+                case "DEC":
+
+                    break;
+                case "AAA":
+
+                    break;
+                case "AAS":
+
+                    break;
+                case "IMUL":
+
+                    break;
+                case "IDIV":
+
+                    break;
+            }
+        }
+    
     }
 }
