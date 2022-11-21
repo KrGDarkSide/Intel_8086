@@ -46,15 +46,15 @@ namespace Intel_8086
 
         // FLAGS
 
-        bool SF = false;
-        bool ZF = false;
-        bool PF = false;
-        bool AF = false;
-        bool CF = false;
-        bool OF = false;
-        bool IF = false;
-        bool DF = false;
-        bool TF = false;
+        bool SF = false;    // Sign Flag
+        bool ZF = false;    // Zero Flag
+        bool PF = false;    // Parity Flag
+        bool AF = false;    // Auxiliary Carry Flag
+        bool CF = false;    // Carry Flag
+        bool OF = false;    // Overflow Flag
+        bool IF = false;    // Interrupt Flag
+        bool DF = false;    // Direction Flag
+        bool TF = false;    // Trap Flag
 
         Stack<short> the_stack = new Stack<short>();
 
@@ -503,16 +503,28 @@ namespace Intel_8086
 
         private void Asm_operations(string inst, List<string> ops)
         {
-            switch(inst)
+            if (!Is_register(ops[0]))
+            {
+                short ops_1 = Convert.ToInt16(ops[0]);
+            }
+            if (!Is_register(ops[1]))
+            {
+                short ops_2 = Convert.ToInt16(ops[1]);
+            }
+
+            switch (inst)
             {
                 // DATA TRANSFER
 
-                case "MOV":
-
+                case "MOV":   
+                    if(ops[0] == "AX")
+                    {
+                        AH = Convert.ToByte(ops[1]);
+                    }
                     break;
 
                 case "PUSH":
-                    //the_stack.Push(Convert.ToInt16(ops[0]));
+                    the_stack.Push(Convert.ToInt16(ops[1]));
 
                     break;
                 case "PUSHF":
@@ -574,16 +586,77 @@ namespace Intel_8086
             }
         }
 
-        //private void Register_sercher(string regd, byte AH, byte AL, byte BH, byte BL, byte CH, byte CL, byte DH, byte DL, short SP, short BP, short SI, short DI, short CS, short DS, short SS, short ES, short IP, short FLAG)
+        // WRITE FUNCTION CONVERTING STRING TO SHORT & STRING TO BYTE
+
+        /*
+          HERE put the code!
+        */
+
+        private bool Is_register(string ops)
+        {
+            switch (ops)
+            {
+                case "AX":
+                    return true;
+                case "AH":
+                    return true;
+                case "AL":
+                    return true;
+                case "BX":
+                    return true;
+                case "BH":
+                    return true;
+                case "BL":
+                    return true;
+                case "CX":
+                    return true;
+                case "CH":
+                    return true;
+                case "CL":
+                    return true;
+                case "DX":
+                    return true;
+                case "DH":
+                    return true;
+                case "DL":
+                    return true;
+
+                case "SP":
+                    return true;
+                case "BP":
+                    return true;
+                case "SI":
+                    return true;
+                case "DI":
+                    return true;
+
+                case "CS":
+                    return true;
+                case "DS":
+                    return true;
+                case "SS":
+                    return true;
+                case "ES":
+                    return true;
+                case "IP":
+                    return true;
+                case "FLAGS":
+                    return true;
+
+                default:
+                    return false;
+            }
+        }
+
+        //private object Register_sercher(string regd, byte AH, byte AL, byte BH, byte BL, byte CH, byte CL, byte DH, byte DL, short SP, short BP, short SI, short DI, short CS, short DS, short SS, short ES, short IP, short FLAG)
         //{
-        //    switch(regd)
+        //    switch (regd)
         //    {
         //        case "AX":
-                    
-        //            break;
-
+        //            return AH;
         //    }
         //}
-    
+        //Register_sercher(ops[0], AH, AL, BH, BL, CH, CL, DH, DL, SP, BP, SI, DI, CS, DS, SS, ES, IP, FLAGS) = 2;
+
     }
 }
