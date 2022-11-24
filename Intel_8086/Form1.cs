@@ -476,7 +476,21 @@ namespace Intel_8086
                 }
 
                 ops.Add(x);
+                Asm_operations(inst, ops);
+
                 x = "";
+
+                // STACK & REGISTERS VALUES:
+
+                Stack_box.Text = "AX\t=\t" + (AH + AL);
+                Stack_box.Text += "\nBX\t=\t" + (BH + BL);
+                Stack_box.Text += "\nCX\t=\t" + (CH + CL);
+                Stack_box.Text += "\nDX\t=\t" + (DH + DL);
+
+                Stack_box.Text += "\nSP\t=\t" + SP;
+                Stack_box.Text += "\nBP\t=\t" + BP;
+                Stack_box.Text += "\nSI\t=\t" + SI;
+                Stack_box.Text += "\nDI\t=\t" + DI;
             }
 
 
@@ -516,11 +530,44 @@ namespace Intel_8086
             {
                 // DATA TRANSFER
 
-                case "MOV":   
-                    if(ops[0] == "AX")
+                case "MOV":
+                    if (ops[0] == "AX" || ops[0] == "AH")
                     {
                         AH = Convert.ToByte(ops[1]);
                     }
+                    else if (ops[0] == "AL")
+                    {
+                        AL = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "BX" || ops[0] == "BH")
+                    {
+                        BH = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "BL")
+                    {
+                        BL = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "CX" || ops[0] == "CH")
+                    {
+                        CH = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "CL")
+                    {
+                        CL = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "DX" || ops[0] == "DH")
+                    {
+                        DH = Convert.ToByte(ops[1]);
+                    }
+                    else if (ops[0] == "DL")
+                    {
+                        DL = Convert.ToByte(ops[1]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Probably you enter wrong operation.");
+                    }
+
                     break;
 
                 case "PUSH":
