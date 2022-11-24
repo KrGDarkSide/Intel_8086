@@ -56,6 +56,9 @@ namespace Intel_8086
         bool DF = false;    // Direction Flag
         bool TF = false;    // Trap Flag
 
+        // MEMEORY
+        Int64 mem = 0;
+
         Stack<short> the_stack = new Stack<short>();
 
         public Int_8086()
@@ -491,6 +494,8 @@ namespace Intel_8086
                 Stack_box.Text += "\nBP\t=\t" + BP;
                 Stack_box.Text += "\nSI\t=\t" + SI;
                 Stack_box.Text += "\nDI\t=\t" + DI;
+
+                Stack_box.Text += "\n\nMemory\t=\t" + mem;
             }
 
 
@@ -503,6 +508,7 @@ namespace Intel_8086
         {
             Instruction.Text = "";
             Operation.Text = "";
+            Stack_box.Text = "";
         }
 
         // STACK --> shows the contents of the register 
@@ -517,55 +523,185 @@ namespace Intel_8086
 
         private void Asm_operations(string inst, List<string> ops)
         {
-            if (!Is_register(ops[0]))
-            {
-                short ops_1 = Convert.ToInt16(ops[0]);
-            }
-            if (!Is_register(ops[1]))
-            {
-                short ops_2 = Convert.ToInt16(ops[1]);
-            }
+            //if (!Is_register(ops[0]))
+            //{
+            //    short ops_1 = Convert.ToInt16(ops[0]);
+            //}
+            //if (!Is_register(ops[1]))
+            //{
+            //    short ops_2 = Convert.ToInt16(ops[1]);
+            //}
 
             switch (inst)
             {
                 // DATA TRANSFER
 
                 case "MOV":
-                    if (ops[0] == "AX" || ops[0] == "AH")
+                    if ( Is_register(ops[0]) && !Is_register(ops[1]) )
                     {
-                        AH = Convert.ToByte(ops[1]);
+                        if (ops[0] == "AX" || ops[0] == "AH")
+                        {
+                            AH = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "AL")
+                        {
+                            AL = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "BX" || ops[0] == "BH")
+                        {
+                            BH = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "BL")
+                        {
+                            BL = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "CX" || ops[0] == "CH")
+                        {
+                            CH = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "CL")
+                        {
+                            CL = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "DX" || ops[0] == "DH")
+                        {
+                            DH = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "DL")
+                        {
+                            DL = Convert.ToByte(ops[1]);
+                        }
                     }
-                    else if (ops[0] == "AL")
+                    else if ( Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem") )     //          <-- mem / registers don't save mem value
                     {
-                        AL = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "BX" || ops[0] == "BH")
-                    {
-                        BH = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "BL")
-                    {
-                        BL = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "CX" || ops[0] == "CH")
-                    {
-                        CH = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "CL")
-                    {
-                        CL = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "DX" || ops[0] == "DH")
-                    {
-                        DH = Convert.ToByte(ops[1]);
-                    }
-                    else if (ops[0] == "DL")
-                    {
-                        DL = Convert.ToByte(ops[1]);
+                        if (ops[0] == "AX" || ops[0] == "AH")
+                        {
+                            if (ops[1] == "BX") { AH = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { AH = BH; }
+                            else if(ops[1] == "BL") { AH = BL; }
+                            else if(ops[1] == "CX") { AH = Convert.ToByte(CH + CL); }
+                            else if(ops[1] == "CH") { AH = CH; }
+                            else if(ops[1] == "CL") { AH = CL; }
+                            else if(ops[1] == "DX") { AH = Convert.ToByte(DH + DL); }
+                            else if(ops[1] == "DH") { AH = DH; }
+                            else if(ops[1] == "DL") { AH = DL; }
+                            else { AH = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "AL")
+                        {
+                            if (ops[1] == "BX") { AL = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { AL = BH; }
+                            else if (ops[1] == "BL") { AL = BL; }
+                            else if (ops[1] == "CX") { AL = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { AL = CH; }
+                            else if (ops[1] == "CL") { AL = CL; }
+                            else if (ops[1] == "DX") { AL = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { AL = DH; }
+                            else if (ops[1] == "DL") { AL = DL; }
+                            else { AL = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "BX" || ops[0] == "BH")
+                        {
+                            if (ops[1] == "AX") { BH = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { BH = AH; }
+                            else if (ops[1] == "AL") { BH = AL; }
+                            else if (ops[1] == "CX") { BH = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { BH = CH; }
+                            else if (ops[1] == "CL") { BH = CL; }
+                            else if (ops[1] == "DX") { BH = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { BH = DH; }
+                            else if (ops[1] == "DL") { BH = DL; }
+                            else { BH = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "BL")
+                        {
+                            if (ops[1] == "AX") { BL = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { BL = AH; }
+                            else if (ops[1] == "AL") { BL = AL; }
+                            else if (ops[1] == "CX") { BL = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { BL = CH; }
+                            else if (ops[1] == "CL") { BL = CL; }
+                            else if (ops[1] == "DX") { BL = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { BL = DH; }
+                            else if (ops[1] == "DL") { BL = DL; }
+                            else { BL = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "CX" || ops[0] == "CH")
+                        {
+                            if (ops[1] == "BX") { CH = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { CH = BH; }
+                            else if (ops[1] == "BL") { CH = BL; }
+                            else if (ops[1] == "AX") { CH = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { CH = AH; }
+                            else if (ops[1] == "AL") { CH = AL; }
+                            else if (ops[1] == "DX") { CH = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { CH = DH; }
+                            else if (ops[1] == "DL") { CH = DL; }
+                            else { CH = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "CL")
+                        {
+                            if (ops[1] == "BX") { CL = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { CL = BH; }
+                            else if (ops[1] == "BL") { CL = BL; }
+                            else if (ops[1] == "AX") { CL = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { CL = AH; }
+                            else if (ops[1] == "AL") { CL = AL; }
+                            else if (ops[1] == "DX") { CL = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { CL = DH; }
+                            else if (ops[1] == "DL") { CL = DL; }
+                            else { CL = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "DX" || ops[0] == "DH")
+                        {
+                            if (ops[1] == "BX") { DH = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { DH = BH; }
+                            else if (ops[1] == "BL") { DH = BL; }
+                            else if (ops[1] == "CX") { DH = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { DH = CH; }
+                            else if (ops[1] == "CL") { DH = CL; }
+                            else if (ops[1] == "AX") { DH = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { DH = AH; }
+                            else if (ops[1] == "AL") { DH = AL; }
+                            else { DH = Convert.ToByte(mem); }
+                        }
+                        else if (ops[0] == "DL")
+                        {
+                            if (ops[1] == "BX") { DL = Convert.ToByte(BH + BL); }
+                            else if (ops[1] == "BH") { DL = BH; }
+                            else if (ops[1] == "BL") { DL = BL; }
+                            else if (ops[1] == "CX") { DL = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { DL = CH; }
+                            else if (ops[1] == "CL") { DL = CL; }
+                            else if (ops[1] == "AX") { DL = Convert.ToByte(AH + AL); }
+                            else if (ops[1] == "AH") { DL = AH; }
+                            else if (ops[1] == "AL") { DL = AL; }
+                            else { DL = Convert.ToByte(mem); }
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Probably you enter wrong operation.");
+                        if(ops[0] == "mem")
+                        {
+                            if ( !Is_register(ops[1]) ) { mem = Convert.ToByte(ops[1]); }
+                            else 
+                            {
+                                if (ops[1] == "AX") { mem = AH + AL; }
+                                else if (ops[1] == "AH") { mem = AH; }
+                                else if (ops[1] == "AL") { mem = AL; }
+                                else if (ops[1] == "BX") { mem = BH + BL; }
+                                else if (ops[1] == "BH") { mem = BH; }
+                                else if (ops[1] == "BL") { mem = BL; }
+                                else if (ops[1] == "CX") { mem = CH + CL; }
+                                else if (ops[1] == "CH") { mem = CH; }
+                                else if (ops[1] == "CL") { mem = CL; }
+                                else if (ops[1] == "DX") { mem = DH + DL; }
+                                else if (ops[1] == "DH") { mem = DH; }
+                                else if (ops[1] == "DL") { mem = DL; }
+                                else { MessageBox.Show("Probably you enter Wrong operation!"); }
+                            }
+                        }
+                        else { MessageBox.Show("You enter Wrong operations!"); }  
                     }
 
                     break;
