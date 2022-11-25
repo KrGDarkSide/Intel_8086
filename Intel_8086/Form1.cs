@@ -30,10 +30,13 @@ namespace Intel_8086
         byte DH = 0;
         byte DL = 0;
 
+        // POINTERS & INDEX REGISTERS
+
         short SP = 0;
         short BP = 0;
         short SI = 0;
         short DI = 0;
+        short IP = 0;
 
         // SEGMENT REGISTERS:
 
@@ -41,8 +44,6 @@ namespace Intel_8086
         short DS = 0;
         short SS = 0;
         short ES = 0;
-        short IP = 0;
-        short FLAGS = 0;
 
         // FLAGS
 
@@ -485,17 +486,7 @@ namespace Intel_8086
 
                 // STACK & REGISTERS VALUES:
 
-                Stack_box.Text = "AX\t=\t" + (AH + AL);
-                Stack_box.Text += "\nBX\t=\t" + (BH + BL);
-                Stack_box.Text += "\nCX\t=\t" + (CH + CL);
-                Stack_box.Text += "\nDX\t=\t" + (DH + DL);
-
-                Stack_box.Text += "\nSP\t=\t" + SP;
-                Stack_box.Text += "\nBP\t=\t" + BP;
-                Stack_box.Text += "\nSI\t=\t" + SI;
-                Stack_box.Text += "\nDI\t=\t" + DI;
-
-                Stack_box.Text += "\n\nMemory\t=\t" + mem;
+                Print();
             }
 
 
@@ -523,21 +514,12 @@ namespace Intel_8086
 
         private void Asm_operations(string inst, List<string> ops)
         {
-            //if (!Is_register(ops[0]))
-            //{
-            //    short ops_1 = Convert.ToInt16(ops[0]);
-            //}
-            //if (!Is_register(ops[1]))
-            //{
-            //    short ops_2 = Convert.ToInt16(ops[1]);
-            //}
-
             switch (inst)
             {
                 // DATA TRANSFER
 
                 case "MOV":
-                    if ( Is_register(ops[0]) && !Is_register(ops[1]) )
+                    if ( Is_register(ops[0]) && !Is_register(ops[1]) && ops[1] != "mem" )
                     {
                         if (ops[0] == "AX" || ops[0] == "AH")
                         {
@@ -571,20 +553,45 @@ namespace Intel_8086
                         {
                             DL = Convert.ToByte(ops[1]);
                         }
+                        else if (ops[0] == "SP")
+                        {
+                            SP = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "BP")
+                        {
+                            BP = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "SI")
+                        {
+                            SI = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "DI")
+                        {
+                            DI = Convert.ToByte(ops[1]);
+                        }
+                        else if (ops[0] == "IP")
+                        {
+                            IP = Convert.ToByte(ops[1]);
+                        }
                     }
-                    else if ( Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem") )     //          <-- mem / registers don't save mem value
+                    else if ( Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem") )
                     {
                         if (ops[0] == "AX" || ops[0] == "AH")
                         {
                             if (ops[1] == "BX") { AH = Convert.ToByte(BH + BL); }
                             else if (ops[1] == "BH") { AH = BH; }
-                            else if(ops[1] == "BL") { AH = BL; }
-                            else if(ops[1] == "CX") { AH = Convert.ToByte(CH + CL); }
-                            else if(ops[1] == "CH") { AH = CH; }
-                            else if(ops[1] == "CL") { AH = CL; }
-                            else if(ops[1] == "DX") { AH = Convert.ToByte(DH + DL); }
-                            else if(ops[1] == "DH") { AH = DH; }
-                            else if(ops[1] == "DL") { AH = DL; }
+                            else if (ops[1] == "BL") { AH = BL; }
+                            else if (ops[1] == "CX") { AH = Convert.ToByte(CH + CL); }
+                            else if (ops[1] == "CH") { AH = CH; }
+                            else if (ops[1] == "CL") { AH = CL; }
+                            else if (ops[1] == "DX") { AH = Convert.ToByte(DH + DL); }
+                            else if (ops[1] == "DH") { AH = DH; }
+                            else if (ops[1] == "DL") { AH = DL; }
+                            else if (ops[1] == "SP") { AH = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { AH = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { AH = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { AH = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { AH = Convert.ToByte(IP); }
                             else { AH = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "AL")
@@ -598,6 +605,11 @@ namespace Intel_8086
                             else if (ops[1] == "DX") { AL = Convert.ToByte(DH + DL); }
                             else if (ops[1] == "DH") { AL = DH; }
                             else if (ops[1] == "DL") { AL = DL; }
+                            else if (ops[1] == "SP") { AL = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { AL = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { AL = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { AL = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { AL = Convert.ToByte(IP); }
                             else { AL = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "BX" || ops[0] == "BH")
@@ -611,6 +623,11 @@ namespace Intel_8086
                             else if (ops[1] == "DX") { BH = Convert.ToByte(DH + DL); }
                             else if (ops[1] == "DH") { BH = DH; }
                             else if (ops[1] == "DL") { BH = DL; }
+                            else if (ops[1] == "SP") { BH = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { BH = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { BH = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { BH = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { BH = Convert.ToByte(IP); }
                             else { BH = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "BL")
@@ -624,6 +641,11 @@ namespace Intel_8086
                             else if (ops[1] == "DX") { BL = Convert.ToByte(DH + DL); }
                             else if (ops[1] == "DH") { BL = DH; }
                             else if (ops[1] == "DL") { BL = DL; }
+                            else if (ops[1] == "SP") { BL = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { BL = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { BL = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { BL = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { BL = Convert.ToByte(IP); }
                             else { BL = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "CX" || ops[0] == "CH")
@@ -637,6 +659,11 @@ namespace Intel_8086
                             else if (ops[1] == "DX") { CH = Convert.ToByte(DH + DL); }
                             else if (ops[1] == "DH") { CH = DH; }
                             else if (ops[1] == "DL") { CH = DL; }
+                            else if (ops[1] == "SP") { CH = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { CH = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { CH = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { CH = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { CH = Convert.ToByte(IP); }
                             else { CH = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "CL")
@@ -650,6 +677,11 @@ namespace Intel_8086
                             else if (ops[1] == "DX") { CL = Convert.ToByte(DH + DL); }
                             else if (ops[1] == "DH") { CL = DH; }
                             else if (ops[1] == "DL") { CL = DL; }
+                            else if (ops[1] == "SP") { CL = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { CL = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { CL = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { CL = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { CL = Convert.ToByte(IP); }
                             else { CL = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "DX" || ops[0] == "DH")
@@ -663,6 +695,11 @@ namespace Intel_8086
                             else if (ops[1] == "AX") { DH = Convert.ToByte(AH + AL); }
                             else if (ops[1] == "AH") { DH = AH; }
                             else if (ops[1] == "AL") { DH = AL; }
+                            else if (ops[1] == "SP") { DH = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { DH = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { DH = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { DH = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { DH = Convert.ToByte(IP); }
                             else { DH = Convert.ToByte(mem); }
                         }
                         else if (ops[0] == "DL")
@@ -676,6 +713,11 @@ namespace Intel_8086
                             else if (ops[1] == "AX") { DL = Convert.ToByte(AH + AL); }
                             else if (ops[1] == "AH") { DL = AH; }
                             else if (ops[1] == "AL") { DL = AL; }
+                            else if (ops[1] == "SP") { DL = Convert.ToByte(SP); }
+                            else if (ops[1] == "BP") { DL = Convert.ToByte(BP); }
+                            else if (ops[1] == "SI") { DL = Convert.ToByte(SI); }
+                            else if (ops[1] == "DI") { DL = Convert.ToByte(DI); }
+                            else if (ops[1] == "IP") { DL = Convert.ToByte(IP); }
                             else { DL = Convert.ToByte(mem); }
                         }
                     }
@@ -698,6 +740,11 @@ namespace Intel_8086
                                 else if (ops[1] == "DX") { mem = DH + DL; }
                                 else if (ops[1] == "DH") { mem = DH; }
                                 else if (ops[1] == "DL") { mem = DL; }
+                                else if (ops[1] == "SP") { mem = SP; }
+                                else if (ops[1] == "BP") { mem = BP; }
+                                else if (ops[1] == "SI") { mem = SI; }
+                                else if (ops[1] == "DI") { mem = DI; }
+                                else if (ops[1] == "IP") { mem = IP; }
                                 else { MessageBox.Show("Probably you enter Wrong operation!"); }
                             }
                         }
@@ -769,12 +816,6 @@ namespace Intel_8086
             }
         }
 
-        // WRITE FUNCTION CONVERTING STRING TO SHORT & STRING TO BYTE
-
-        /*
-          HERE put the code!
-        */
-
         private bool Is_register(string ops)
         {
             switch (ops)
@@ -812,6 +853,8 @@ namespace Intel_8086
                     return true;
                 case "DI":
                     return true;
+                case "IP":
+                    return true;
 
                 case "CS":
                     return true;
@@ -821,25 +864,26 @@ namespace Intel_8086
                     return true;
                 case "ES":
                     return true;
-                case "IP":
-                    return true;
-                case "FLAGS":
-                    return true;
 
                 default:
                     return false;
             }
         }
 
-        //private object Register_sercher(string regd, byte AH, byte AL, byte BH, byte BL, byte CH, byte CL, byte DH, byte DL, short SP, short BP, short SI, short DI, short CS, short DS, short SS, short ES, short IP, short FLAG)
-        //{
-        //    switch (regd)
-        //    {
-        //        case "AX":
-        //            return AH;
-        //    }
-        //}
-        //Register_sercher(ops[0], AH, AL, BH, BL, CH, CL, DH, DL, SP, BP, SI, DI, CS, DS, SS, ES, IP, FLAGS) = 2;
+        private void Print()
+        {
+            Stack_box.Text = "AX\t=\t" + (AH + AL);
+            Stack_box.Text += "\nBX\t=\t" + (BH + BL);
+            Stack_box.Text += "\nCX\t=\t" + (CH + CL);
+            Stack_box.Text += "\nDX\t=\t" + (DH + DL);
 
+            Stack_box.Text += "\nSP\t=\t" + SP;
+            Stack_box.Text += "\nBP\t=\t" + BP;
+            Stack_box.Text += "\nIP\t=\t" + IP;
+            Stack_box.Text += "\nSI\t=\t" + SI;
+            Stack_box.Text += "\nDI\t=\t" + DI;
+
+            Stack_box.Text += "\n\nMemory\t=\t" + mem;
+        }
     }
 }
