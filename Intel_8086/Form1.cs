@@ -523,55 +523,55 @@ namespace Intel_8086
                     {
                         if (ops[0] == "AX" || ops[0] == "AH")
                         {
-                            AH = Convert.ToByte(ops[1]);
+                            AH = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "AL")
                         {
-                            AL = Convert.ToByte(ops[1]);
+                            AL = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "BX" || ops[0] == "BH")
                         {
-                            BH = Convert.ToByte(ops[1]);
+                            BH = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "BL")
                         {
-                            BL = Convert.ToByte(ops[1]);
+                            BL = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "CX" || ops[0] == "CH")
                         {
-                            CH = Convert.ToByte(ops[1]);
+                            CH = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "CL")
                         {
-                            CL = Convert.ToByte(ops[1]);
+                            CL = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "DX" || ops[0] == "DH")
                         {
-                            DH = Convert.ToByte(ops[1]);
+                            DH = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "DL")
                         {
-                            DL = Convert.ToByte(ops[1]);
+                            DL = Convert.ToByte(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "SP")
                         {
-                            SP = Convert.ToByte(ops[1]);
+                            SP = Convert.ToInt16(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "BP")
                         {
-                            BP = Convert.ToByte(ops[1]);
+                            BP = Convert.ToInt16(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "SI")
                         {
-                            SI = Convert.ToByte(ops[1]);
+                            SI = Convert.ToInt16(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "DI")
                         {
-                            DI = Convert.ToByte(ops[1]);
+                            DI = Convert.ToInt16(Limits(ops[0], ops[1]));
                         }
                         else if (ops[0] == "IP")
                         {
-                            IP = Convert.ToByte(ops[1]);
+                            IP = Convert.ToInt16(Limits(ops[0], ops[1]));
                         }
                     }
                     else if ( Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem") )
@@ -826,7 +826,7 @@ namespace Intel_8086
                 // ARITHMETIC
 
                 case "ADD":
-                    if (ops.Count() == 2)                                                                       // if n > 255 then ?
+                    if (ops.Count() == 2)
                     {
                         if (Is_register(ops[0]) && !Is_register(ops[1]))
                         {
@@ -939,7 +939,7 @@ namespace Intel_8086
 
                     break;
                 case "SUB":
-                    if (ops.Count() == 2)                                                                       // if -n then n = 0
+                    if (ops.Count() == 2)
                     {
                         if (Is_register(ops[0]) && !Is_register(ops[1]))
                         {
@@ -1154,13 +1154,31 @@ namespace Intel_8086
                 Stack_box.Text += " " + x;
             }
         }
+
+        private short Limits(string ops ,string n)  // TO MOV
+        {
+            short numb = Convert.ToInt16(n);
+
+            if (ops == "AX" || ops == "AH" || ops == "AL" || ops == "BX" || ops == "BH" || ops == "BL" || ops == "CX" || ops == "CH" || ops == "CL" || ops == "DX" || ops == "DH" || ops == "DL")
+            {
+                if (numb > 127) { numb -= 127; OF = true; }
+                else if (numb < 0) { numb += 127; OF = true; }
+            }
+            else
+            {
+                if (numb > 255) { numb -= 255; OF = true; }
+                else if (numb < 0) { numb += 255; OF = true; }
+            }
+
+            return numb;
+        }
+
     }
 }
 
 /*  TO DO:
  *  
  *  1. MAKE ARYTHMETIC INSTRUCTIONS
- *  2. RESTRICTED VALUE OF REGISTERS (MOV, 128 - 0)
  *  3. XCHG
  *  
  */
