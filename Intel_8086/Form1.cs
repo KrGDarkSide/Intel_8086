@@ -971,23 +971,519 @@ namespace Intel_8086
                         }
                         else if (ops[0] == "BL")
                         {
-
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (BL, AH) = (AH, BL);
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (BL, AL) = (AL, BL);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (BL, BH) = (BH, BL);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (BL, CH) = (CH, BL);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (BL, CL) = (CL, BL);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (BL, DH) = (DH, BL);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (BL, DL) = (DL, BL);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (BL, SP) = (Convert.ToByte(SP), BL);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (BL, BP) = (Convert.ToByte(BP), BL);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (BL, IP) = (Convert.ToByte(IP), BL);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (BL, SI) = (Convert.ToByte(SI), BL);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (BL, DI) = (Convert.ToByte(DI), BL);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
                         }
                         else if (ops[0] == "CX" || ops[0] == "CH")
                         {
-
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (CH, AH) = (AH, CH);
+                            }
+                            else if (ops[1] == "AL")
+                            {
+                                (CH, AL) = (AL, CH);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (CH, BH) = (BH, CH);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (CH, BL) = (BL, CH);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (CH, CL) = (CL, CH);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (CH, DH) = (DH, CH);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (CH, DL) = (DL, CH);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (CH, SP) = (Convert.ToByte(SP), CH);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (CH, BP) = (Convert.ToByte(BP), CH);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (CH, IP) = (Convert.ToByte(IP), CH);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (CH, SI) = (Convert.ToByte(SI), CH);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (CH, DI) = (Convert.ToByte(DI), CH);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
                         }
                         else if (ops[0] == "CL")
                         {
-
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (CL, AH) = (AH, CL);
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (CL, AL) = (AL, CL);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (CL, BH) = (BH, CL);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (CL, CH) = (CH, CL);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (CL, DH) = (DH, CL);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (CL, DL) = (DL, CL);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (CL, SP) = (Convert.ToByte(SP), CL);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (CL, BP) = (Convert.ToByte(BP), CL);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (CL, IP) = (Convert.ToByte(IP), CL);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (CL, SI) = (Convert.ToByte(SI), CL);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (CL, DI) = (Convert.ToByte(DI), CL);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
                         }
                         else if (ops[0] == "DX" || ops[0] == "DH")
                         {
-
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (DH, AH) = (AH, DH);
+                            }
+                            else if (ops[1] == "AL")
+                            {
+                                (DH, AL) = (AL, DH);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (DH, BH) = (BH, DH);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (DH, BL) = (BL, DH);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (DH, CH) = (CH, DH);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (DH, CL) = (CL, DH);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (DH, DL) = (DL, DH);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (DH, SP) = (Convert.ToByte(SP), DH);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (DH, BP) = (Convert.ToByte(BP), DH);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (DH, IP) = (Convert.ToByte(IP), DH);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (DH, SI) = (Convert.ToByte(SI), DH);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (DH, DI) = (Convert.ToByte(DI), DH);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
                         }
                         else if (ops[0] == "DL")
                         {
-
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (DL, AH) = (AH, DL);
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (DL, AL) = (AL, DL);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (DL, BH) = (BH, DL);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (DL, BL)  = (BL, DL);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (DL, CH) = (CH, DL);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (DL, CL) = (CL, DL);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (DL, DH) = (DH, DL);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (DL, SP) = (Convert.ToByte(SP), DL);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (DL, BP) = (Convert.ToByte(BP), DL);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (DL, IP) = (Convert.ToByte(IP), DL);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (DL, SI) = (Convert.ToByte(SI), DL);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (DL, DI) = (Convert.ToByte(DI), DL);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "IP")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (IP, AH) = (AH, Convert.ToByte(IP));
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (IP, AL) = (AL, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (IP, BH) = (BH, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (IP, BL) = (BL, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (IP, CH) = (CH, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (IP, CL) = (CL, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (IP, DH) = (DH, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (IP, DL) = (DL, Convert.ToByte(IP));
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (IP, SP) = (SP, IP);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (IP, BP) = (BP, IP);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (IP, SI) = (SI, IP);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (IP, DI) = (DI, IP);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "SP")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (SP, AH) = (AH, Convert.ToByte(SP));
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (SP, AL) = (AL, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (SP, BH) = (BH, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (SP, BL) = (BL, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (SP, CH) = (CH, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (SP, CL) = (CL, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (SP, DH) = (DH, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (SP, DL) = (DL, Convert.ToByte(SP));
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (SP, IP) = (IP, SP);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (SP, BP) = (BP, SP);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (SP, SI) = (SI, SP);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (SP, DI) = (DI, SP);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "BP")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (BP, AH) = (AH, Convert.ToByte(BP));
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (BP, AL) = (AL, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (BP, BH) = (BH, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (BP, BL) = (BL, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (BP, CH) = (CH, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (BP, CL) = (CL, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (BP, DH) = (DH, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (BP, DL) = (DL, Convert.ToByte(BP));
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (BP, SP) = (SP, BP);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (BP, IP) = (IP, BP);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (BP, SI) = (SI, BP);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (BP, DI) = (DI, BP);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "SI")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (SI, AH) = (AH, Convert.ToByte(SI));
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (SI, AL) = (AL, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (SI, BH) = (BH, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (SI, BL) = (BL, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (SI, CH) = (CH, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (SI, CL) = (CL, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (SI, DH) = (DH, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (SI, DL) = (DL, Convert.ToByte(SI));
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (SI, SP) = (SP, SI);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (SI, BP) = (BP, SI);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (SI, IP) = (IP, SI);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (SI, DI) = (DI, SI);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "DI")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (DI, AH) = (AH, Convert.ToByte(DI));
+                            }
+                            if (ops[1] == "AL")
+                            {
+                                (DI, AL) = (AL, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (DI, BH) = (BH, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (DI, BL) = (BL, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (DI, CH) = (CH, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (DI, CL) = (CL, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (DI, DH) = (DH, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (DI, DL) = (DL, Convert.ToByte(DI));
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (DI, SP) = (SP, DI);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (DI, BP) = (BP, DI);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (DI, SI) = (SI, DI);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (DI, IP) = (IP, DI);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
                         }
                     }
                     else { MessageBox.Show("You need to specify two registers."); }
@@ -1163,6 +1659,13 @@ namespace Intel_8086
             }
 
             return numb;
+        }
+
+        private byte Flag_reg(bool O, bool D, bool I, bool T, bool S, bool Z, bool AC, bool P, bool CY)
+        {
+            string flags = "";
+
+            return Convert.ToByte(flags);
         }
 
         private void Arithmetics(List<string> ops, char operation)
