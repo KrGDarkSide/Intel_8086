@@ -811,6 +811,186 @@ namespace Intel_8086
 
                     break;
                 case "XCHG":
+                    if(Is_register(ops[0]) && Is_register(ops[1]))
+                    {
+                        if (ops[0] == "AX" || ops[0] == "AH")
+                        {
+                            if (ops[1] == "AL")
+                            {
+                                (AH, AL) = (AL, AH);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (AH, BH) = (BH, AH);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (AH, BL) = (BL, AH);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (AH, CH) = (CH, AH);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (AH, CL) = (CL, AH);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (AH, DH) = (DH, AH);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (AH, DL) = (DL, AH);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (AH, SP) = (Convert.ToByte(SP), AH);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (AH, BP) = (Convert.ToByte(BP), AH);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (AH, IP) = (Convert.ToByte(IP), AH);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (AH, SI) = (Convert.ToByte(SI), AH);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (AH, DI) = (Convert.ToByte(DI), AH);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "AL")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                (AL, AH) = (AH, AL);
+                            }
+                            else if (ops[1] == "BX" || ops[1] == "BH")
+                            {
+                                (AL, BH) = (BH, AL);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (AL, BL) = (BL, AL);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (AL, CH) = (CH, AL);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (AL, CL) = (CL, AL);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (AL, DH) = (DH, AL);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (AL, DL) = (DL, AL);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (AL, SP) = (Convert.ToByte(SP), AL);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (AL, BP) = (Convert.ToByte(BP), AL);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (AL, IP) = (Convert.ToByte(IP), AL);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (AL, SI) = (Convert.ToByte(SI), AL);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (AL, DI) = (Convert.ToByte(DI), AL);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "BX" || ops[0] == "BH")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "BH")
+                            {
+                                (BH, AH) = (AH, BH);
+                            }
+                            else if (ops[1] == "AL")
+                            {
+                                (BH, AL) = (AL, BH);
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                (BH, BL) = (BL, BH);
+                            }
+                            else if (ops[1] == "CX" || ops[1] == "CH")
+                            {
+                                (BH, CH) = (CH, BH);
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                (BH, CL) = (CL, BH);
+                            }
+                            else if (ops[1] == "DX" || ops[1] == "DH")
+                            {
+                                (BH, DH) = (DH, BH);
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                (BH, DL) = (DL, BH);
+                            }
+                            else if (ops[1] == "SP")
+                            {
+                                (BH, SP) = (Convert.ToByte(SP), BH);
+                            }
+                            else if (ops[1] == "BP")
+                            {
+                                (BH, BP) = (Convert.ToByte(BP), BH);
+                            }
+                            else if (ops[1] == "IP")
+                            {
+                                (BH, IP) = (Convert.ToByte(IP), BH);
+                            }
+                            else if (ops[1] == "SI")
+                            {
+                                (BH, SI) = (Convert.ToByte(SI), BH);
+                            }
+                            else if (ops[1] == "DI")
+                            {
+                                (BH, DI) = (Convert.ToByte(DI), BH);
+                            }
+                            else { MessageBox.Show("Nothing happend if you swap the same registers."); }
+                        }
+                        else if (ops[0] == "BL")
+                        {
+
+                        }
+                        else if (ops[0] == "CX" || ops[0] == "CH")
+                        {
+
+                        }
+                        else if (ops[0] == "CL")
+                        {
+
+                        }
+                        else if (ops[0] == "DX" || ops[0] == "DH")
+                        {
+
+                        }
+                        else if (ops[0] == "DL")
+                        {
+
+                        }
+                    }
+                    else { MessageBox.Show("You need to specify two registers."); }
 
                     break;
                 case "LEA":
@@ -828,109 +1008,7 @@ namespace Intel_8086
                 case "ADD":
                     if (ops.Count() == 2)
                     {
-                        if (Is_register(ops[0]) && !Is_register(ops[1]))
-                        {
-                            if (ops[0] == "AX" || ops[0] == "AH") { if (ops[1] == "mem") { AH += Convert.ToByte(mem); } else { AH += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "AL") { if (ops[1] == "mem") { AL += Convert.ToByte(mem); } else { AL += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "BX" || ops[0] == "BH") { if (ops[1] == "mem") { BH += Convert.ToByte(mem); } else { BH += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "BL") { if (ops[1] == "mem") { BL += Convert.ToByte(mem); } else { BL += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "CX" || ops[0] == "CH") { if (ops[1] == "mem") { CH += Convert.ToByte(mem); } else { CH += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "CL") { if (ops[1] == "mem") { CL += Convert.ToByte(mem); } else { CL += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "DX" || ops[0] == "DH") { if (ops[1] == "mem") { DH += Convert.ToByte(mem); } else { DH += Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "DL") { if (ops[1] == "mem") { DL += Convert.ToByte(mem); } else { DL += Convert.ToByte(ops[1]); } }
-                        }
-                        else if (Is_register(ops[0]) && Is_register(ops[1]))
-                        {
-                            if (ops[0] == "AX" || ops[0] == "AH")
-                            {
-                                if (ops[1] == "AL") { AH += AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { AH += BH; }
-                                else if (ops[1] == "BL") { AH += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { AH += CH; }
-                                else if (ops[1] == "CL") { AH += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { AH += DH; }
-                                else if (ops[1] == "DL") { AH += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "AL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { AL += AH; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { AL += BH; }
-                                else if (ops[1] == "BL") { AL += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { AL += CH; }
-                                else if (ops[1] == "CL") { AL += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { AL += DH; }
-                                else if (ops[1] == "DL") { AL += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "BX" || ops[0] == "BH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { BH += AH; }
-                                else if (ops[1] == "AL") { BH += AL; }
-                                else if (ops[1] == "BL") { BH += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { BH += CH; }
-                                else if (ops[1] == "CL") { BH += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { BH += DH; }
-                                else if (ops[1] == "DL") { BH += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "BL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { BL += AH; }
-                                else if (ops[1] == "AL") { BL += BL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { BL += BH; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { BL += CH; }
-                                else if (ops[1] == "CL") { BL += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { BL += DH; }
-                                else if (ops[1] == "DL") { BL += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "CX" || ops[0] == "CH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { CH += AH; }
-                                else if (ops[1] == "AL") { CH += AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { CH += BH; }
-                                else if (ops[1] == "BL") { CH += BL; }
-                                else if (ops[1] == "CL") { CH += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { CH += DH; }
-                                else if (ops[1] == "DL") { CH += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "CL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { CL += AH; }
-                                else if (ops[1] == "AL") { CL += AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { CL += BH; }
-                                else if (ops[1] == "BL") { CL += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { CL += CH; } 
-                                else if (ops[1] == "DX" || ops[1] == "DH") { CL += DH; }
-                                else if (ops[1] == "DL") { CL += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "DX" || ops[0] == "DH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { DH += AH; }
-                                else if (ops[1] == "AL") { DH += AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { DH += BH; }
-                                else if (ops[1] == "BL") { DH += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { DH += CH; }
-                                else if (ops[1] == "CL") { DH += CL; }
-                                else if (ops[1] == "DL") { DH += DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "DL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { DL += AH; }
-                                else if (ops[1] == "AL") { DL += AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { DL += BH; }
-                                else if (ops[1] == "BL") { DL += BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { DL += CH; }
-                                else if (ops[1] == "CL") { DL += CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { DL += DH; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                        }
-                        else { MessageBox.Show("You will not see that operation in \"View\" window."); }
+                        Arithmetics(ops, '+');
                     }
                     else
                     {
@@ -941,109 +1019,7 @@ namespace Intel_8086
                 case "SUB":
                     if (ops.Count() == 2)
                     {
-                        if (Is_register(ops[0]) && !Is_register(ops[1]))
-                        {
-                            if (ops[0] == "AX" || ops[0] == "AH") { if (ops[1] == "mem") { AH -= Convert.ToByte(mem); } else { AH -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "AL") { if (ops[1] == "mem") { AL -= Convert.ToByte(mem); } else { AL -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "BX" || ops[0] == "BH") { if (ops[1] == "mem") { BH -= Convert.ToByte(mem); } else { BH -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "BL") { if (ops[1] == "mem") { BL -= Convert.ToByte(mem); } else { BL -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "CX" || ops[0] == "CH") { if (ops[1] == "mem") { CH -= Convert.ToByte(mem); } else { CH -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "CL") { if (ops[1] == "mem") { CL -= Convert.ToByte(mem); } else { CL -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "DX" || ops[0] == "DH") { if (ops[1] == "mem") { DH -= Convert.ToByte(mem); } else { DH -= Convert.ToByte(ops[1]); } }
-                            else if (ops[0] == "DL") { if (ops[1] == "mem") { DL -= Convert.ToByte(mem); } else { DL -= Convert.ToByte(ops[1]); } }
-                        }
-                        else if (Is_register(ops[0]) && Is_register(ops[1]))
-                        {
-                            if (ops[0] == "AX" || ops[0] == "AH")
-                            {
-                                if (ops[1] == "AL") { AH -= AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { AH -= BH; }
-                                else if (ops[1] == "BL") { AH -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { AH -= CH; }
-                                else if (ops[1] == "CL") { AH -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { AH -= DH; }
-                                else if (ops[1] == "DL") { AH -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "AL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { AL -= AH; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { AL -= BH; }
-                                else if (ops[1] == "BL") { AL -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { AL -= CH; }
-                                else if (ops[1] == "CL") { AL -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { AL -= DH; }
-                                else if (ops[1] == "DL") { AL -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "BX" || ops[0] == "BH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { BH -= AH; }
-                                else if (ops[1] == "AL") { BH -= AL; }
-                                else if (ops[1] == "BL") { BH -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { BH -= CH; }
-                                else if (ops[1] == "CL") { BH -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { BH -= DH; }
-                                else if (ops[1] == "DL") { BH -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "BL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { BL -= AH; }
-                                else if (ops[1] == "AL") { BL -= BL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { BL -= BH; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { BL -= CH; }
-                                else if (ops[1] == "CL") { BL -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { BL -= DH; }
-                                else if (ops[1] == "DL") { BL -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "CX" || ops[0] == "CH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { CH -= AH; }
-                                else if (ops[1] == "AL") { CH -= AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { CH -= BH; }
-                                else if (ops[1] == "BL") { CH -= BL; }
-                                else if (ops[1] == "CL") { CH -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { CH -= DH; }
-                                else if (ops[1] == "DL") { CH -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "CL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { CL -= AH; }
-                                else if (ops[1] == "AL") { CL -= AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { CL -= BH; }
-                                else if (ops[1] == "BL") { CL -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { CL -= CH; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { CL -= DH; }
-                                else if (ops[1] == "DL") { CL -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "DX" || ops[0] == "DH")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { DH -= AH; }
-                                else if (ops[1] == "AL") { DH -= AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { DH -= BH; }
-                                else if (ops[1] == "BL") { DH -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { DH -= CH; }
-                                else if (ops[1] == "CL") { DH -= CL; }
-                                else if (ops[1] == "DL") { DH -= DL; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                            else if (ops[0] == "DL")
-                            {
-                                if (ops[1] == "AX" || ops[1] == "AH") { DL -= AH; }
-                                else if (ops[1] == "AL") { DL -= AL; }
-                                else if (ops[1] == "BX" || ops[1] == "BH") { DL -= BH; }
-                                else if (ops[1] == "BL") { DL -= BL; }
-                                else if (ops[1] == "CX" || ops[1] == "CH") { DL -= CH; }
-                                else if (ops[1] == "CL") { DL -= CL; }
-                                else if (ops[1] == "DX" || ops[1] == "DH") { DL -= DH; }
-                                else { MessageBox.Show("Wrong operands."); }
-                            }
-                        }
-                        else { MessageBox.Show("You will not see that operation in \"View\" window."); }
+                        Arithmetics(ops, '-');
                     }
                     else
                     {
@@ -1052,9 +1028,25 @@ namespace Intel_8086
 
                     break;
                 case "MUL":
+                    if (ops.Count() == 2)
+                    {
+                        Arithmetics(ops, '*');
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are obligated to enter two operands.");
+                    }
 
                     break;
                 case "DIV":
+                    if (ops.Count() == 2)
+                    {
+                        Arithmetics(ops, '/');
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are obligated to enter two operands.");
+                    }
 
                     break;
                 case "INC":
@@ -1161,16 +1153,123 @@ namespace Intel_8086
 
             if (ops == "AX" || ops == "AH" || ops == "AL" || ops == "BX" || ops == "BH" || ops == "BL" || ops == "CX" || ops == "CH" || ops == "CL" || ops == "DX" || ops == "DH" || ops == "DL")
             {
-                if (numb > 127) { numb -= 127; OF = true; }
+                if (numb > 127) { numb %= 127; OF = true; }
                 else if (numb < 0) { numb += 127; OF = true; }
             }
             else
             {
-                if (numb > 255) { numb -= 255; OF = true; }
+                if (numb > 255) { numb %= 255; OF = true; }
                 else if (numb < 0) { numb += 255; OF = true; }
             }
 
             return numb;
+        }
+
+        private void Arithmetics(List<string> ops, char operation)
+        {
+            if (Is_register(ops[0]) && !Is_register(ops[1]))
+            {
+                if (ops[0] == "AX" || ops[0] == "AH") { if (ops[1] == "mem") { AL += Convert.ToByte(mem); } else { AL += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "AL") { if (ops[1] == "mem") { AL += Convert.ToByte(mem); } else { AL += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "BX" || ops[0] == "BH") { if (ops[1] == "mem") { BH += Convert.ToByte(mem); } else { BH += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "BL") { if (ops[1] == "mem") { BL += Convert.ToByte(mem); } else { BL += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "CX" || ops[0] == "CH") { if (ops[1] == "mem") { CH += Convert.ToByte(mem); } else { CH += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "CL") { if (ops[1] == "mem") { CL += Convert.ToByte(mem); } else { CL += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "DX" || ops[0] == "DH") { if (ops[1] == "mem") { DH += Convert.ToByte(mem); } else { DH += Convert.ToByte(ops[1]); } }
+                else if (ops[0] == "DL") { if (ops[1] == "mem") { DL += Convert.ToByte(mem); } else { DL += Convert.ToByte(ops[1]); } }
+            }
+            else if (Is_register(ops[0]) && Is_register(ops[1]))
+            {
+                if (ops[0] == "AX" || ops[0] == "AH")
+                {
+                    if (ops[1] == "AL") { AH += AL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { AH += BH; }
+                    else if (ops[1] == "BL") { AH += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { AH += CH; }
+                    else if (ops[1] == "CL") { AH += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { AH += DH; }
+                    else if (ops[1] == "DL") { AH += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "AL")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { AL += AH; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { AL += BH; }
+                    else if (ops[1] == "BL") { AL += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { AL += CH; }
+                    else if (ops[1] == "CL") { AL += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { AL += DH; }
+                    else if (ops[1] == "DL") { AL += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "BX" || ops[0] == "BH")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { BH += AH; }
+                    else if (ops[1] == "AL") { BH += AL; }
+                    else if (ops[1] == "BL") { BH += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { BH += CH; }
+                    else if (ops[1] == "CL") { BH += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { BH += DH; }
+                    else if (ops[1] == "DL") { BH += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "BL")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { BL += AH; }
+                    else if (ops[1] == "AL") { BL += BL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { BL += BH; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { BL += CH; }
+                    else if (ops[1] == "CL") { BL += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { BL += DH; }
+                    else if (ops[1] == "DL") { BL += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "CX" || ops[0] == "CH")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { CH += AH; }
+                    else if (ops[1] == "AL") { CH += AL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { CH += BH; }
+                    else if (ops[1] == "BL") { CH += BL; }
+                    else if (ops[1] == "CL") { CH += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { CH += DH; }
+                    else if (ops[1] == "DL") { CH += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "CL")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { CL += AH; }
+                    else if (ops[1] == "AL") { CL += AL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { CL += BH; }
+                    else if (ops[1] == "BL") { CL += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { CL += CH; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { CL += DH; }
+                    else if (ops[1] == "DL") { CL += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "DX" || ops[0] == "DH")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { DH += AH; }
+                    else if (ops[1] == "AL") { DH += AL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { DH += BH; }
+                    else if (ops[1] == "BL") { DH += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { DH += CH; }
+                    else if (ops[1] == "CL") { DH += CL; }
+                    else if (ops[1] == "DL") { DH += DL; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+                else if (ops[0] == "DL")
+                {
+                    if (ops[1] == "AX" || ops[1] == "AH") { DL += AH; }
+                    else if (ops[1] == "AL") { DL += AL; }
+                    else if (ops[1] == "BX" || ops[1] == "BH") { DL += BH; }
+                    else if (ops[1] == "BL") { DL += BL; }
+                    else if (ops[1] == "CX" || ops[1] == "CH") { DL += CH; }
+                    else if (ops[1] == "CL") { DL += CL; }
+                    else if (ops[1] == "DX" || ops[1] == "DH") { DL += DH; }
+                    else { MessageBox.Show("Wrong operands."); }
+                }
+            }
+            else { MessageBox.Show("You will not see that operation in \"View\" window."); }
         }
 
     }
