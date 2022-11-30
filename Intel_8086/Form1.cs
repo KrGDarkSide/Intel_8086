@@ -459,7 +459,7 @@ namespace Intel_8086
                 string ops_input = (Operation.Text).Replace(" ", "");
 
                 List<string> ops = new List<string>(2);
-                string x = "";          // helping variable
+                string x = "";              // helping variable
                 byte last_mov_reg = 0;      // contain value of last register used in MOV --> "MOV   _this_, _sth_"
 
                 for (int i = 0; i < ops_input.Length; i++)
@@ -1892,45 +1892,45 @@ namespace Intel_8086
 
                     break;
                 case "MUL":
-                    if (ops.Count() == 1 && (Convert.ToByte(ops[0]) > 0))
+                    if (ops.Count() == 1)
                     {
                         if (Is_register(ops[0]) || ops[0] == "mem")
                         {
                             if (ops[0] == "AX" || ops[0] == "AH")
                             {
-                                
+                                AH = Limits_arith(AL, AH, '*');
                             }
                             else if (ops[0] == "AL")
                             {
-                               
+                                AH = Limits_arith(AL, AL, '*');
                             }
                             else if (ops[0] == "BX" || ops[0] == "BH")
                             {
-                                
+                                AH = Limits_arith(AL, BH, '*');
                             }
                             else if (ops[0] == "BL")
                             {
-                               
+                                AH = Limits_arith(AL, BL, '*');
                             }
                             else if (ops[0] == "CX" || ops[0] == "CH")
                             {
-                                
+                                AH = Limits_arith(AL, CH, '*');
                             }
                             else if (ops[0] == "CL")
                             {
-                                
+                                AH = Limits_arith(AL, CL, '*');
                             }
                             else if (ops[0] == "DX" || ops[0] == "DH")
                             {
-                                
+                                AH = Limits_arith(AL, DH, '*');
                             }
                             else if (ops[0] == "DL")
                             {
-                                
+                                AH = Limits_arith(AL, DL, '*');
                             }
                             else
                             {
-
+                                AH = Limits_arith(AL, Convert.ToByte(mem), '*');
                             }
                         }
                         else { MessageBox.Show("You are obligated to use registers or memory."); }
@@ -1942,45 +1942,56 @@ namespace Intel_8086
 
                     break;
                 case "DIV":
-                    if (ops.Count() == 1 && (Convert.ToByte(ops[0]) > 0))
+                    if (ops.Count() == 1)
                     {
                         if (Is_register(ops[0]) || ops[0] == "mem")
                         {
+                            byte ah = AH;       // AH value before operation;
+
                             if (ops[0] == "AX" || ops[0] == "AH")
                             {
-
+                                AH = Limits_arith(AH, AH, '/');
+                                DH = Limits_arith(ah, AH, '%');
                             }
                             else if (ops[0] == "AL")
                             {
-
+                                AH = Limits_arith(AH, AL, '/');
+                                DH = Limits_arith(ah, AL, '%');
                             }
                             else if (ops[0] == "BX" || ops[0] == "BH")
                             {
-
+                                AH = Limits_arith(AH, BH, '/');
+                                DH = Limits_arith(ah, BH, '%');
                             }
                             else if (ops[0] == "BL")
                             {
-
+                                AH = Limits_arith(AH, BL, '/');
+                                DH = Limits_arith(ah, BL, '%');
                             }
                             else if (ops[0] == "CX" || ops[0] == "CH")
                             {
-
+                                AH = Limits_arith(AH, CH, '/');
+                                DH = Limits_arith(ah, CH, '%');
                             }
                             else if (ops[0] == "CL")
                             {
-
+                                AH = Limits_arith(AH, CL, '/');
+                                DH = Limits_arith(ah, CL, '%');
                             }
                             else if (ops[0] == "DX" || ops[0] == "DH")
                             {
-
+                                AH = Limits_arith(AH, DH, '/');
+                                DH = Limits_arith(ah, DH, '%');
                             }
                             else if (ops[0] == "DL")
                             {
-
+                                AH = Limits_arith(AH, DL, '/');
+                                DH = Limits_arith(ah, DL, '%');
                             }
                             else
                             {
-
+                                AH = Limits_arith(AH, Convert.ToByte(mem), '/');
+                                DH = Limits_arith(ah, Convert.ToByte(mem), '%');
                             }
                         }
                         else { MessageBox.Show("You are obligated to use registers or memory."); }
@@ -2098,9 +2109,114 @@ namespace Intel_8086
 
                     break;
                 case "IMUL":
+                    if (ops.Count() == 1)
+                    {
+                        if (Is_register(ops[0]) || ops[0] == "mem")
+                        {
+                            if (ops[0] == "AX" || ops[0] == "AH")
+                            {
+                                AH = Limits_arith(AL, AH, '*');
+                            }
+                            else if (ops[0] == "AL")
+                            {
+                                AH = Limits_arith(AL, AL, '*');
+                            }
+                            else if (ops[0] == "BX" || ops[0] == "BH")
+                            {
+                                AH = Limits_arith(AL, BH, '*');
+                            }
+                            else if (ops[0] == "BL")
+                            {
+                                AH = Limits_arith(AL, BL, '*');
+                            }
+                            else if (ops[0] == "CX" || ops[0] == "CH")
+                            {
+                                AH = Limits_arith(AL, CH, '*');
+                            }
+                            else if (ops[0] == "CL")
+                            {
+                                AH = Limits_arith(AL, CL, '*');
+                            }
+                            else if (ops[0] == "DX" || ops[0] == "DH")
+                            {
+                                AH = Limits_arith(AL, DH, '*');
+                            }
+                            else if (ops[0] == "DL")
+                            {
+                                AH = Limits_arith(AL, DL, '*');
+                            }
+                            else
+                            {
+                                AH = Limits_arith(AL, Convert.ToByte(mem), '*');
+                            }
+                        }
+                        else { MessageBox.Show("You are obligated to use registers or memory."); }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are obligated to enter only one operand.");
+                    }
 
                     break;
                 case "IDIV":
+                    if (ops.Count() == 1)
+                    {
+                        if (Is_register(ops[0]) || ops[0] == "mem")
+                        {
+                            byte ah = AH;       // AH value before operation;
+
+                            if (ops[0] == "AX" || ops[0] == "AH")
+                            {
+                                AH = Limits_arith(AH, AH, '/');
+                                DH = Limits_arith(ah, AH, '%');
+                            }
+                            else if (ops[0] == "AL")
+                            {
+                                AH = Limits_arith(AH, AL, '/');
+                                DH = Limits_arith(ah, AL, '%');
+                            }
+                            else if (ops[0] == "BX" || ops[0] == "BH")
+                            {
+                                AH = Limits_arith(AH, BH, '/');
+                                DH = Limits_arith(ah, BH, '%');
+                            }
+                            else if (ops[0] == "BL")
+                            {
+                                AH = Limits_arith(AH, BL, '/');
+                                DH = Limits_arith(ah, BL, '%');
+                            }
+                            else if (ops[0] == "CX" || ops[0] == "CH")
+                            {
+                                AH = Limits_arith(AH, CH, '/');
+                                DH = Limits_arith(ah, CH, '%');
+                            }
+                            else if (ops[0] == "CL")
+                            {
+                                AH = Limits_arith(AH, CL, '/');
+                                DH = Limits_arith(ah, CL, '%');
+                            }
+                            else if (ops[0] == "DX" || ops[0] == "DH")
+                            {
+                                AH = Limits_arith(AH, DH, '/');
+                                DH = Limits_arith(ah, DH, '%');
+                            }
+                            else if (ops[0] == "DL")
+                            {
+                                AH = Limits_arith(AH, DL, '/');
+                                DH = Limits_arith(ah, DL, '%');
+                            }
+                            else
+                            {
+                                AH = Limits_arith(AH, Convert.ToByte(mem), '/');
+                                DH = Limits_arith(ah, Convert.ToByte(mem), '%');
+                            }
+                        }
+                        else { MessageBox.Show("You are obligated to use registers or memory."); }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are obligated to enter only one operand.");
+                    }
 
                     break;
             }
@@ -2228,12 +2344,68 @@ namespace Intel_8086
                     }
                     else
                     {
-                        return (byte)(a + b);
+                        return (byte)(a - b);
                     }
                 case '*':
-
+                    if (a * b > 127)
+                    {
+                        OF = true;
+                        return (byte)((a * b) % 127);
+                    }
+                    else if (a * b < 0)
+                    {
+                        OF = true;
+                        return (byte)(((a * b) % 127) * (-1));
+                    }
+                    else
+                    {
+                        return (byte)(a * b);
+                    }
                 case '/':
-
+                    if (b == 0)
+                    {
+                        MessageBox.Show("ERROR!");
+                        return a;
+                    }
+                    else
+                    {
+                        if (a / b > 127)
+                        {
+                            OF = true;
+                            return (byte)((a / b) % 127);
+                        }
+                        else if (a / b < 127)
+                        {
+                            OF = true;
+                            return (byte)((a / b) % 127);
+                        }
+                        else
+                        {
+                            return (byte)(a / b);
+                        }
+                    }
+                case '%':
+                    if (b == 0)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        if (a % b > 127)
+                        {
+                            OF = true;
+                            return (byte)((a % b) % 127);
+                        }
+                        else if (a % b < 127)
+                        {
+                            OF = true;
+                            return (byte)((a % b) % 127);
+                        }
+                        else
+                        {
+                            return (byte)(a % b);
+                        }
+                    }
                 default:
                     return 0;
             }
@@ -2279,7 +2451,7 @@ namespace Intel_8086
 
 /*  TO DO:
  *  
- *  1. MAKE ARYTHMETIC INSTRUCTIONS (AAA, AAS, MUL, IMUL, DIV, IDIV)
+ *  1. MAKE ARYTHMETIC INSTRUCTIONS (AAA, AAS)
  *  2. POPF, PUSHF
  *  3. LEA, LAHF, SAHF
  *  4. Logical instructions
