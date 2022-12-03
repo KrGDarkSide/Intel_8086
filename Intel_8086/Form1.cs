@@ -2103,9 +2103,31 @@ namespace Intel_8086
 
                     break;
                 case "AAA":
+                    if (AL > 9 || AF == true)
+                    {
+                        AL += 6;
+                        AH++;
+                        CF = true;
+                        AF = true;
+                    }
+                    else
+                    {
+                        AF = false;
+                        CF = false;
+                    }
 
                     break;
                 case "AAS":
+                    if (AL > 9 || AF == true)
+                    {
+                        AL -= 6;
+                        AH -= 1;
+                    }
+                    else
+                    {
+                        AF = false;
+                        CF = false;
+                    }
 
                     break;
                 case "IMUL":
@@ -2451,7 +2473,6 @@ namespace Intel_8086
 
 /*  TO DO:
  *  
- *  1. MAKE ARYTHMETIC INSTRUCTIONS (AAA, AAS)
  *  2. POPF, PUSHF
  *  3. LEA, LAHF, SAHF
  *  4. Logical instructions
