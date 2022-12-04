@@ -111,6 +111,8 @@ namespace Intel_8086
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Stack_box = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.flagsReg = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -736,11 +738,26 @@ namespace Intel_8086
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // flagsReg
+            // 
+            this.flagsReg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            resources.ApplyResources(this.flagsReg, "flagsReg");
+            this.flagsReg.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.flagsReg.Name = "flagsReg";
+            this.flagsReg.TextChanged += new System.EventHandler(this.flagsReg_TextChanged);
+            // 
             // Int_8086
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.flagsReg);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Stack_box);
             this.Controls.Add(this.tabControl1);
@@ -838,6 +855,8 @@ namespace Intel_8086
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox Stack_box;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RichTextBox flagsReg;
     }
 }
 

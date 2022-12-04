@@ -500,17 +500,22 @@ namespace Intel_8086
             Instruction.Text = "";
             Operation.Text = "";
             Stack_box.Text = "";
+            flagsReg.Text = "";
         }
 
-        // STACK --> shows the contents of the register 
+        // View --> shows the contents of the register 
         private void Stack_box_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        // flags --> contains flags values
+        private void flagsReg_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
-// Following tasks
+        // Following tasks
 
         private void Asm_operations(string inst, List<string> ops, byte last_reg_val)
         {
@@ -831,8 +836,10 @@ namespace Intel_8086
 
                     break;
                 case "PUSHF":
+                    the_stack.Push(Higher_byte(OF, DF, IF, TF));
+                    the_stack.Push(Lower_byte(SF, ZF, AF, PF, CF));
 
-                    SP = Convert.ToInt16(the_stack.Count);
+                    SP = Convert.ToInt16(the_stack.Count - 2);
 
                     break;
 
@@ -883,6 +890,8 @@ namespace Intel_8086
                     break;
 
                 case "POPF":
+                    the_stack.Pop();
+                    the_stack.Pop();
 
                     SP = Convert.ToInt16(the_stack.Count);
 
@@ -1574,10 +1583,17 @@ namespace Intel_8086
                     
                     break;
                 case "LEA":
+                    //unsafe
+                    //{
+                    //    Int64 mem = ;
+                    //    Int64 *x = &mem;
+
+                    //    AH = Convert.ToByte((byte)*x);
+                    //}
 
                     break;
                 case "LAHF":
-                    AH = Load(SF, ZF, AF, PF, CF);
+                    AH = Lower_byte(SF, ZF, AF, PF, CF);
 
                     break;
                 case "SAHF":
@@ -2320,6 +2336,22 @@ namespace Intel_8086
             {
                 Stack_box.Text += " " + x;
             }
+
+            flagsReg.Text = "SF = " + Is_True(SF);
+            flagsReg.Text += "\tZF = " + Is_True(ZF);
+            flagsReg.Text += "\tPF = " + Is_True(PF);
+            flagsReg.Text += "\nAF = " + Is_True(AF);
+            flagsReg.Text += "\tCF = " + Is_True(CF);
+            flagsReg.Text += "\tOF = " + Is_True(OF);
+            flagsReg.Text += "\nIF = " + Is_True(IF);
+            flagsReg.Text += "\tDF = " + Is_True(DF);
+            flagsReg.Text += "\tTF = " + Is_True(TF);
+        }
+
+        private int Is_True(bool x)
+        {
+            if(x) { return 1; }
+            else { return 0; }
         }
 
         private short Limits(string ops ,string n)  // TO MOV
@@ -2434,67 +2466,51 @@ namespace Intel_8086
             }
         }
 
-        private byte Flag_reg(bool O, bool D, bool I, bool T, bool S, bool Z, bool AC, bool P, bool CY)
+        private byte Lower_byte(bool SF, bool ZF, bool AF, bool PF, bool CF)
         {
-            string flags = "";
+            string lower = "";
 
-            if (O)
-            { flags += "1"; }
-            else { flags += "0"; }
+            if (SF) { lower += "1"; }
+            else { lower += "0"; }
 
-            if (D) { flags += "1"; }
-            else { flags += "0"; }
+            if (ZF) { lower += "1"; }
+            else { lower += "0"; }
 
-            if (I) { flags += "1"; }
-            else { flags += "0"; }
+            lower += "0";
 
-            if (T) { flags += "1"; }
-            else { flags += "0"; }
+            if (AF) { lower += "1"; }
+            else { lower += "0"; }
 
-            if (S) { flags += "1"; }
-            else { flags += "0"; }
+            lower += 0;
 
-            if (Z) { flags += "1"; }
-            else { flags += "0"; }
+            if (PF) { lower += "1"; }
+            else { lower += "0"; }
 
-            if (AC) { flags += "1"; }
-            else { flags += "0"; }
+            lower += 1;
 
-            if (P) { flags += "1"; }
-            else { flags += "0"; }
+            if (CF) { lower += "1"; }
+            else { lower += "0"; }
 
-            if (CY) { flags += "1"; }
-            else { flags += "0"; }
-
-            return Convert.ToByte(flags, 2);
+            return (Convert.ToByte(lower, 2));
         }
 
-        private byte Load(bool SF, bool ZF, bool AF, bool PF, bool CF)
+        private byte Higher_byte(bool OF, bool DF, bool IF, bool TF)
         {
-            string flag_register = "";
+            string higher = "0000";
 
-            if (SF) { flag_register += "1"; }
-            else { flag_register += "0"; }
+            if (OF) { higher += "1"; }
+            else { higher += "0"; }
 
-            if (ZF) { flag_register += "1"; }
-            else { flag_register += "0"; }
+            if (DF) { higher += "1"; }
+            else { higher += "0"; }
 
-            flag_register += "0";
+            if (IF) { higher += "1"; }
+            else { higher += "0"; }
 
-            if (AF) { flag_register += "1"; }
-            else { flag_register += "0"; }
+            if (TF) { higher += "1"; }
+            else { higher += "0"; }
 
-            flag_register += 0;
-
-            if (PF) { flag_register += "1"; }
-            else { flag_register += "0"; }
-
-            flag_register += 1;
-
-            if (CF) { flag_register += "1"; }
-            else { flag_register += "0"; }
-
-            return (Convert.ToByte(flag_register, 2));
+            return (Convert.ToByte(higher, 2));
         }
 
         private void Store(byte AH_reg)
@@ -2522,8 +2538,7 @@ namespace Intel_8086
 
 /*  TO DO:
  *  
- *  2. POPF, PUSHF, LEA, SAHF
- *  4. Logical instructions
- *  5. ...
+ *  1. Logical instructions
+ *  2. ...
  *  
  */
