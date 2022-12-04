@@ -1577,6 +1577,7 @@ namespace Intel_8086
 
                     break;
                 case "LAHF":
+                    AH = Load(SF, ZF, AF, PF, CF);
 
                     break;
                 case "SAHF":
@@ -2465,7 +2466,55 @@ namespace Intel_8086
             if (CY) { flags += "1"; }
             else { flags += "0"; }
 
-            return Convert.ToByte(flags);
+            return Convert.ToByte(flags, 2);
+        }
+
+        private byte Load(bool SF, bool ZF, bool AF, bool PF, bool CF)
+        {
+            string flag_register = "";
+
+            if (SF) { flag_register += "1"; }
+            else { flag_register += "0"; }
+
+            if (ZF) { flag_register += "1"; }
+            else { flag_register += "0"; }
+
+            flag_register += "0";
+
+            if (AF) { flag_register += "1"; }
+            else { flag_register += "0"; }
+
+            flag_register += 0;
+
+            if (PF) { flag_register += "1"; }
+            else { flag_register += "0"; }
+
+            flag_register += 1;
+
+            if (CF) { flag_register += "1"; }
+            else { flag_register += "0"; }
+
+            return (Convert.ToByte(flag_register, 2));
+        }
+
+        private void Store(byte AH_reg)
+        {
+            string flag_lowerB = Convert.ToString(AH_reg, 2).PadLeft(8, '0');
+
+            if (flag_lowerB[0] == '0') { SF = false; }
+            else { SF = true; }
+
+            if (flag_lowerB[1] == '0') { SF = false; }
+            else { SF = true; }
+
+            if (flag_lowerB[3] == '0') { SF = false; }
+            else { SF = true; }
+
+            if (flag_lowerB[5] == '0') { SF = false; }
+            else { SF = true; }
+
+            if (flag_lowerB[7] == '0') { SF = false; }
+            else { SF = true; }
         }
 
     }
@@ -2473,8 +2522,7 @@ namespace Intel_8086
 
 /*  TO DO:
  *  
- *  2. POPF, PUSHF
- *  3. LEA, LAHF, SAHF
+ *  2. POPF, PUSHF, LEA, SAHF
  *  4. Logical instructions
  *  5. ...
  *  
