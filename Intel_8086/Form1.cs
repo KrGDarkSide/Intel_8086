@@ -791,7 +791,6 @@ namespace Intel_8086
                     {
                         MessageBox.Show("MOV must contain two operands.");
                     }
-
                     break;
 
                 case "PUSH":
@@ -833,14 +832,13 @@ namespace Intel_8086
                             the_stack.Push(Convert.ToByte(ops[0]));
                         }
                     }
-
                     break;
+
                 case "PUSHF":
                     the_stack.Push(Higher_byte(OF, DF, IF, TF));
                     the_stack.Push(Lower_byte(SF, ZF, AF, PF, CF));
 
                     SP = Convert.ToInt16(the_stack.Count - 2);
-
                     break;
 
                 case "POP":
@@ -886,7 +884,6 @@ namespace Intel_8086
                     {
                         MessageBox.Show("POP should contain one operand.");
                     }
-
                     break;
 
                 case "POPF":
@@ -894,8 +891,8 @@ namespace Intel_8086
                     the_stack.Pop();
 
                     SP = Convert.ToInt16(the_stack.Count);
-
                     break;
+
                 case "XCHG":
                     if (ops.Count == 2)
                     {
@@ -1580,8 +1577,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("XCHG must contain two operands.");
                     }
-                    
                     break;
+
                 case "LEA":
                     if (ops.Count > 1 && ops[1] == "mem")
                     {
@@ -1633,12 +1630,12 @@ namespace Intel_8086
                         }
                     }
                     else { MessageBox.Show("Use -->\n{LEA   REG, mem}"); }
-                    
                     break;
+
                 case "LAHF":
                     AH = Lower_byte(SF, ZF, AF, PF, CF);
-
                     break;
+
                 case "SAHF":
 
                     break;
@@ -1796,8 +1793,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter two operands.");
                     }
-
                     break;
+
                 case "SUB":
                     if (ops.Count() == 2)
                     {
@@ -1949,8 +1946,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter two operands.");
                     }
-
                     break;
+
                 case "MUL":
                     if (ops.Count() == 1)
                     {
@@ -1999,8 +1996,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
-
                     break;
+
                 case "DIV":
                     if (ops.Count() == 1)
                     {
@@ -2060,8 +2057,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
-
                     break;
+
                 case "INC":
                     if (ops.Count() == 1)
                     {
@@ -2110,8 +2107,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
-
                     break;
+
                 case "DEC":
                     if (ops.Count() == 1)
                     {
@@ -2160,8 +2157,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
-
                     break;
+
                 case "AAA":
                     if (AL > 9 || AF == true)
                     {
@@ -2175,8 +2172,8 @@ namespace Intel_8086
                         AF = false;
                         CF = false;
                     }
-
                     break;
+
                 case "AAS":
                     if (AL > 9 || AF == true)
                     {
@@ -2188,8 +2185,8 @@ namespace Intel_8086
                         AF = false;
                         CF = false;
                     }
-
                     break;
+
                 case "IMUL":
                     if (ops.Count() == 1)
                     {
@@ -2238,8 +2235,8 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
-
                     break;
+
                 case "IDIV":
                     if (ops.Count() == 1)
                     {
@@ -2299,7 +2296,234 @@ namespace Intel_8086
                     {
                         MessageBox.Show("You are obligated to enter only one operand.");
                     }
+                    break;
 
+                // LOGICAL
+
+                case "NOT":
+                    if(ops.Count == 1 && (Is_register(ops[0]) || ops[0] == "mem"))
+                    {
+                        if (ops[0] == "AH" || ops[0] == "AX")
+                        {
+                            AH = L_NOT(Convert.ToString(AH, 2));
+                        }
+                        else if (ops[0] == "AL")
+                        {
+                            AL = L_NOT(Convert.ToString(AL, 2));
+                        }
+                        else if (ops[0] == "BX" || ops[0] == "BH")
+                        {
+                            BH = L_NOT(Convert.ToString(BH, 2));
+                        }
+                        else if (ops[0] == "BL")
+                        {
+                            BL = L_NOT(Convert.ToString(BL, 2));
+                        }
+                        else if (ops[0] == "CX" || ops[0] == "CH")
+                        {
+                            CH = L_NOT(Convert.ToString(CH, 2));
+                        }
+                        else if (ops[0] == "CL")
+                        {
+                            CL = L_NOT(Convert.ToString(CL, 2));
+                        } 
+                        else if (ops[0] == "DX" || ops[0] == "DH")
+                        {
+                            DH = L_NOT(Convert.ToString(DH, 2));
+                        }
+                        else if (ops[0] == "DL")
+                        {
+                            DL = L_NOT(Convert.ToString(DL, 2));
+                        }
+                        else if (ops[0] == "IP")
+                        {
+                            IP = L_NOT(Convert.ToString(IP, 2));
+                        }
+                        else if (ops[0] == "BP")
+                        {
+                            BP = L_NOT(Convert.ToString(BP, 2));
+                        }
+                        else if (ops[0] == "SP")
+                        {
+                            SP = L_NOT(Convert.ToString(SP, 2));
+                        }
+                        else if (ops[0] == "DI")
+                        {
+                            DI = L_NOT(Convert.ToString(DI, 2));
+                        }
+                        else if (ops[0] == "SI")
+                        {
+                            SI = L_NOT(Convert.ToString(SI, 2));
+                        }
+                    }
+                    else { MessageBox.Show("You are allowed to enter registers or memory."); }
+                    break;
+
+                case "AND":
+                    if (ops.Count == 2)
+                    {
+                        if (Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem"))
+                        {
+                            if (ops[0] == "AH" || ops[0] == "AX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    AH = L_AND(Convert.ToString(AH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "AL")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    AL = L_AND(Convert.ToString(AL, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "BH" || ops[0] == "BX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    BH = L_AND(Convert.ToString(BH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Use -->\n{ AND   REG, mem }\n{ AND   REG, REG }\n{ AND   mem, REG }");
+                    }
+                    break;
+
+                case "OR":
+                    break;
+
+                case "XOR":
+                    break;
+
+                case "TEST":
+                    break;
+
+                case "SHL":
+                    break;
+
+                case "SHR":
+                    break;
+
+                case "SAL":
+                    break;
+
+                case "SAR":
+                    break;
+
+                case "ROL":
+                    break;
+
+                case "ROR":
+                    break;
+
+                case "RCL":
+                    break;
+
+                case "RCR":
                     break;
             }
         }
@@ -2576,12 +2800,59 @@ namespace Intel_8086
             else { SF = true; }
         }
 
+        private byte L_NOT(string x)
+        {
+            string x_ = "";
+            for (int i = 0; i < x.Length; i++)
+            {
+                if (x[i] == '1') { x_ += '0'; }
+                else if (x[i] == '0') { x_ += '1'; }
+            }
+
+            byte y = Convert.ToByte(x_, 2);
+
+            return y;
+        }
+
+        private byte L_AND(string a, string b)
+        {
+            string x = "";
+
+            if (a.Length == b.Length)
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (a[i] == '1' && b[i] == '1') { x += '1'; }
+                    else { x += '0'; }
+                }
+            }
+            else if (a.Length > b.Length)
+            {
+                for (int i = b.Length - 1; i >= 0; i--)
+                {
+                    if (b[i] == '1' && a[i] == '1') { x = '1' + x; }
+                    else { x = '0' + x; }
+                }
+            }
+            else
+            {
+                for (int i = a.Length - 1; i >= 0; i--)
+                {
+                    if (a[i] == '1' && b[i] == '1') { x = '1' + x; }
+                    else { x = '0' + x; }
+                }
+            }
+
+            byte z = Convert.ToByte(x, 2);
+
+            return z;
+        }
     }
 }
 
 /*  TO DO:
  *  
- *  1. Logical instructions
+ *  1. Logical instructions (OR, XOR, AND (1/2) ...)
  *  2. ...
  *  
  */
