@@ -1583,14 +1583,57 @@ namespace Intel_8086
                     
                     break;
                 case "LEA":
-                    //unsafe
-                    //{
-                    //    Int64 mem = ;
-                    //    Int64 *x = &mem;
+                    if (ops.Count > 1 && ops[1] == "mem")
+                    {
+                        unsafe
+                        {
+                            Int64 z = mem;
+                            Int64* x = &z;
 
-                    //    AH = Convert.ToByte((byte)*x);
-                    //}
+                            MessageBox.Show("Offset: " + Convert.ToString((long)x, 16));
 
+                            if (ops[0] == "AH" || ops[0] == "AX")
+                            {
+                                AH = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "AL")
+                            {
+                                AL = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "BH" || ops[0] == "BX")
+                            {
+                                BH = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "BL")
+                            {
+                                BL = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "CH" || ops[0] == "CX")
+                            {
+                                CH = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "CL")
+                            {
+                                CL = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "DH" || ops[0] == "DX")
+                            {
+                                DH = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "DL")
+                            {
+                                DL = Convert.ToByte((byte)x);
+                            }
+                            else if (ops[0] == "SP") { SP = Convert.ToByte((byte)x); }
+                            else if (ops[0] == "BP") { BP = Convert.ToByte((byte)x); }
+                            else if (ops[0] == "IP") { IP = Convert.ToByte((byte)x); }
+                            else if (ops[0] == "DI") { DI = Convert.ToByte((byte)x); }
+                            else if (ops[0] == "SI") { SI = Convert.ToByte((byte)x); }
+                            else { MessageBox.Show("Wrong operand!"); }
+                        }
+                    }
+                    else { MessageBox.Show("Use -->\n{LEA   REG, mem}"); }
+                    
                     break;
                 case "LAHF":
                     AH = Lower_byte(SF, ZF, AF, PF, CF);
