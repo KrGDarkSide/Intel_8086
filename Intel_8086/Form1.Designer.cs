@@ -731,6 +731,7 @@ namespace Intel_8086
             resources.ApplyResources(this.Stack_box, "Stack_box");
             this.Stack_box.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Stack_box.Name = "Stack_box";
+            this.Stack_box.ReadOnly = true;
             this.Stack_box.TextChanged += new System.EventHandler(this.Stack_box_TextChanged);
             // 
             // label10
@@ -749,6 +750,7 @@ namespace Intel_8086
             resources.ApplyResources(this.flagsReg, "flagsReg");
             this.flagsReg.ForeColor = System.Drawing.SystemColors.Desktop;
             this.flagsReg.Name = "flagsReg";
+            this.flagsReg.ReadOnly = true;
             this.flagsReg.TextChanged += new System.EventHandler(this.flagsReg_TextChanged);
             // 
             // Int_8086

@@ -3086,7 +3086,7 @@ namespace Intel_8086
                         }
                         else
                         {
-                            MessageBox.Show("Use -->\n{ AND   REG, mem }\n{ AND   REG, REG }\n{ AND   mem, REG }");
+                            MessageBox.Show("Use -->\n{ OR   REG, mem }\n{ OR   REG, REG }\n{ OR   mem, REG }");
                         }
                     }
                     else
@@ -3096,6 +3096,371 @@ namespace Intel_8086
                     break;
 
                 case "XOR":
+                    if (ops.Count == 2)
+                    {
+                        if (Is_register(ops[0]) && (Is_register(ops[1]) || ops[1] == "mem"))
+                        {
+                            if (ops[0] == "AH" || ops[0] == "AX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    AH = L_XOR(Convert.ToString(AH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "AL")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    AL = L_XOR(Convert.ToString(AL, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "BH" || ops[0] == "BX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    BH = L_XOR(Convert.ToString(BH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "BL")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    BL = L_XOR(Convert.ToString(BL, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "CH" || ops[0] == "CX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    CH = L_XOR(Convert.ToString(CH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "CL")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    CL = L_XOR(Convert.ToString(CL, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "DH" || ops[0] == "DX")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    DH = L_XOR(Convert.ToString(DH, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                            else if (ops[0] == "DL")
+                            {
+                                if (ops[1] == "AX" || ops[1] == "AH")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(AH, 2));
+                                }
+                                else if (ops[1] == "AL")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(AL, 2));
+                                }
+                                else if (ops[1] == "BH" || ops[1] == "BX")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(BH, 2));
+                                }
+                                else if (ops[1] == "BL")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(BL, 2));
+                                }
+                                else if (ops[1] == "CH" || ops[1] == "CX")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(CH, 2));
+                                }
+                                else if (ops[1] == "CL")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(CL, 2));
+                                }
+                                else if (ops[1] == "DH" || ops[1] == "DX")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(DH, 2));
+                                }
+                                else if (ops[1] == "DL")
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(DL, 2));
+                                }
+                                else
+                                {
+                                    DL = L_XOR(Convert.ToString(DL, 2), Convert.ToString(mem, 2));
+                                }
+                            }
+                        }
+                        else if (ops[0] == "mem")
+                        {
+                            if (ops[1] == "AX" || ops[1] == "AH")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(AH, 2));
+                            }
+                            else if (ops[1] == "AL")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(AL, 2));
+                            }
+                            else if (ops[1] == "BH" || ops[1] == "BX")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(BH, 2));
+                            }
+                            else if (ops[1] == "BL")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(BL, 2));
+                            }
+                            else if (ops[1] == "CH" || ops[1] == "CX")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(CH, 2));
+                            }
+                            else if (ops[1] == "CL")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(CL, 2));
+                            }
+                            else if (ops[1] == "DH" || ops[1] == "DX")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(DH, 2));
+                            }
+                            else if (ops[1] == "DL")
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), Convert.ToString(DL, 2));
+                            }
+                            else
+                            {
+                                mem = L_XOR(Convert.ToString(mem, 2), ops[1]);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Use -->\n{ XOR   REG, mem }\n{ XOR   REG, REG }\n{ XOR   mem, REG }");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Use -->\n{ XOR   REG, mem }\n{ XOR   REG, REG }\n{ XOR   mem, REG }");
+                    }
                     break;
 
                 case "TEST":
@@ -3123,6 +3488,37 @@ namespace Intel_8086
                     break;
 
                 case "RCR":
+                    break;
+
+                // FLAGS MANIPULATIONS
+
+                case "CLC":
+                    CF = false;
+                    break;
+
+                case "CLD":
+                    DF = false;
+                    break;
+
+                case "CLI":
+                    IF = false;
+                    break;
+
+                case "CMC":
+                    if (CF == true) { CF = false; }
+                    else { CF = true; }
+                    break;
+
+                case "STC":
+                    CF = true;
+                    break;
+
+                case "STD":
+                    DF = true;
+                    break;
+
+                case "STI":
+                    IF = true;
                     break;
             }
         }
@@ -3473,6 +3869,40 @@ namespace Intel_8086
                 {
                     if (a[i] == '1' || b[i] == '1') { x = '1' + x; }
                     else { x = '0' + x; }
+                }
+            }
+
+            byte z = Convert.ToByte(x, 2);
+
+            return z;
+        }
+
+        private byte L_XOR(string a, string b)
+        {
+            string x = "";
+
+            if (a.Length == b.Length)
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if ( (a[i] == '1' && b[i] == '1') || (a[i] == '0' && b[1] == '0')) { x += '0'; }
+                    else { x += '1'; }
+                }
+            }
+            else if (a.Length > b.Length)
+            {
+                for (int i = b.Length - 1; i >= 0; i--)
+                {
+                    if ((a[i] == '1' && b[i] == '1') || (a[i] == '0' && b[1] == '0')) { x += '0'; }
+                    else { x += '1'; }
+                }
+            }
+            else
+            {
+                for (int i = a.Length - 1; i >= 0; i--)
+                {
+                    if ((a[i] == '1' && b[i] == '1') || (a[i] == '0' && b[1] == '0')) { x += '0'; }
+                    else { x += '1'; }
                 }
             }
 
