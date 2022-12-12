@@ -416,20 +416,6 @@ namespace Intel_8086
             Instruction.Text = "IRET";
         }
 
-// ENTER & EXIT INSTRUCTIONS:
-
-        // IN
-        private void IN_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "IN";
-        }
-
-        // OUT
-        private void OUT_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "OUT";
-        }
-
 
 
 // Main block
@@ -1637,7 +1623,7 @@ namespace Intel_8086
                     break;
 
                 case "SAHF":
-
+                    Store(AH);
                     break;
 
                 // ARITHMETIC
@@ -3782,16 +3768,16 @@ namespace Intel_8086
             if (flag_lowerB[0] == '0') { SF = false; }
             else { SF = true; }
 
-            if (flag_lowerB[1] == '0') { SF = false; }
+            if (flag_lowerB[1] == '0') { ZF = false; }
             else { SF = true; }
 
-            if (flag_lowerB[3] == '0') { SF = false; }
+            if (flag_lowerB[3] == '0') { AF = false; }
             else { SF = true; }
 
-            if (flag_lowerB[5] == '0') { SF = false; }
+            if (flag_lowerB[5] == '0') { PF = false; }
             else { SF = true; }
 
-            if (flag_lowerB[7] == '0') { SF = false; }
+            if (flag_lowerB[7] == '0') { CF = false; }
             else { SF = true; }
         }
 

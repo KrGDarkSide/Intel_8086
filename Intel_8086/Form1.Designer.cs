@@ -59,9 +59,6 @@ namespace Intel_8086
             this.INT = new System.Windows.Forms.Button();
             this.Line4 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.OUT = new System.Windows.Forms.Button();
-            this.IN = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.CMC = new System.Windows.Forms.Button();
             this.STI = new System.Windows.Forms.Button();
             this.STD = new System.Windows.Forms.Button();
@@ -154,9 +151,6 @@ namespace Intel_8086
             this.tabPage1.Controls.Add(this.INT);
             this.tabPage1.Controls.Add(this.Line4);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.OUT);
-            this.tabPage1.Controls.Add(this.IN);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.CMC);
             this.tabPage1.Controls.Add(this.STI);
             this.tabPage1.Controls.Add(this.STD);
@@ -388,25 +382,6 @@ namespace Intel_8086
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // OUT
-            // 
-            resources.ApplyResources(this.OUT, "OUT");
-            this.OUT.Name = "OUT";
-            this.OUT.UseVisualStyleBackColor = true;
-            this.OUT.Click += new System.EventHandler(this.OUT_Click);
-            // 
-            // IN
-            // 
-            resources.ApplyResources(this.IN, "IN");
-            this.IN.Name = "IN";
-            this.IN.UseVisualStyleBackColor = true;
-            this.IN.Click += new System.EventHandler(this.IN_Click);
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
             // 
             // CMC
             // 
@@ -826,9 +801,6 @@ namespace Intel_8086
         private System.Windows.Forms.Button CLI;
         private System.Windows.Forms.Button CLD;
         private System.Windows.Forms.Button CMC;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button OUT;
-        private System.Windows.Forms.Button IN;
         private System.Windows.Forms.Label Line4;
         private System.Windows.Forms.Button IRET;
         private System.Windows.Forms.Button RET;
