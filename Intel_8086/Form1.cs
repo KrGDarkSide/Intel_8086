@@ -40,10 +40,10 @@ namespace Intel_8086
 
         // SEGMENT REGISTERS:
 
-        short CS = 0;   // Code Segment
-        short DS = 0;   // Data Segment
-        short SS = 0;   // Stack Segment
-        short ES = 0;   // Extra Segment
+        //short CS = 0;   // Code Segment
+        //short DS = 0;   // Data Segment
+        //short SS = 0;   // Stack Segment
+        //short ES = 0;   // Extra Segment
 
         // FLAGS
 
@@ -747,7 +747,7 @@ namespace Intel_8086
                         {
                             if (ops[0] == "mem")
                             {
-                                if (!Is_register(ops[1])) { mem = Convert.ToByte(ops[1]); }
+                                if (!Is_register(ops[1])) { mem = Converter_to_int16(ops[1]); }
                                 else
                                 {
                                     if (ops[1] == "AX") { mem = AH + AL; }
@@ -1633,53 +1633,55 @@ namespace Intel_8086
                     {
                         if (Is_register(ops[0]) && !Is_register(ops[1]))
                         {
+                            byte second_param;
+
                             if (ops[0] == "AX" || ops[0] == "AH")
                             {
                                 if (ops[1] == "mem")
                                 { AH = Limits_arith(AH, Convert.ToByte(mem), '+'); }
-                                else { AH = Limits_arith(AH, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); AH = Limits_arith(AH, second_param, '+'); }
                             }
                             else if (ops[0] == "AL")
                             {
                                 if (ops[1] == "mem")
                                 { AL = Limits_arith(AL, Convert.ToByte(mem), '+'); }
-                                else { AL = Limits_arith(AL, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); AL = Limits_arith(AL, second_param, '+'); }
                             }
                             else if (ops[0] == "BX" || ops[0] == "BH")
                             {
                                 if (ops[1] == "mem")
                                 { BH = Limits_arith(BH, Convert.ToByte(mem), '+'); }
-                                else { BH = Limits_arith(BH, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); BH = Limits_arith(BH, second_param, '+'); }
                             }
                             else if (ops[0] == "BL")
                             {
                                 if (ops[1] == "mem")
                                 { BL = Limits_arith(BL, Convert.ToByte(mem), '+'); }
-                                else { BL = Limits_arith(BL, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); BL = Limits_arith(BL, second_param, '+'); }
                             }
                             else if (ops[0] == "CX" || ops[0] == "CH")
                             {
                                 if (ops[1] == "mem")
                                 { CH = Limits_arith(CH, Convert.ToByte(mem), '+'); }
-                                else { CH = Limits_arith(CH, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); CH = Limits_arith(CH, second_param, '+'); }
                             }
                             else if (ops[0] == "CL")
                             {
                                 if (ops[1] == "mem")
                                 { CL = Limits_arith(CL, Convert.ToByte(mem), '+'); }
-                                else { CL = Limits_arith(CL, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); CL = Limits_arith(CL, second_param, '+'); }
                             }
                             else if (ops[0] == "DX" || ops[0] == "DH")
                             {
                                 if (ops[1] == "mem")
                                 { DH = Limits_arith(DH, Convert.ToByte(mem), '+'); }
-                                else { DH = Limits_arith(DH, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); DH = Limits_arith(DH, second_param, '+'); }
                             }
                             else if (ops[0] == "DL")
                             {
                                 if (ops[1] == "mem")
                                 { DL = Limits_arith(DL, Convert.ToByte(mem), '+'); }
-                                else { DL = Limits_arith(DL, Convert.ToByte(ops[1]), '+'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); DL = Limits_arith(DL, second_param, '+'); }
                             }
                         }
                         else if (Is_register(ops[0]) && Is_register(ops[1]))
@@ -1786,53 +1788,55 @@ namespace Intel_8086
                     {
                         if (Is_register(ops[0]) && !Is_register(ops[1]))
                         {
+                            byte second_param;
+
                             if (ops[0] == "AX" || ops[0] == "AH")
                             {
                                 if (ops[1] == "mem")
                                 { AH = Limits_arith(AH, Convert.ToByte(mem), '-'); }
-                                else { AH = Limits_arith(AH, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); AH = Limits_arith(AH, second_param, '-'); }
                             }
                             else if (ops[0] == "AL")
                             {
                                 if (ops[1] == "mem")
                                 { AL = Limits_arith(AL, Convert.ToByte(mem), '-'); }
-                                else { AL = Limits_arith(AL, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); AL = Limits_arith(AL, second_param, '-'); }
                             }
                             else if (ops[0] == "BX" || ops[0] == "BH")
                             {
                                 if (ops[1] == "mem")
                                 { BH = Limits_arith(BH, Convert.ToByte(mem), '-'); }
-                                else { BH = Limits_arith(BH, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); BH = Limits_arith(BH, second_param, '-'); }
                             }
                             else if (ops[0] == "BL")
                             {
                                 if (ops[1] == "mem")
                                 { BL = Limits_arith(BL, Convert.ToByte(mem), '-'); }
-                                else { BL = Limits_arith(BL, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); BL = Limits_arith(BL, second_param, '-'); }
                             }
                             else if (ops[0] == "CX" || ops[0] == "CH")
                             {
                                 if (ops[1] == "mem")
                                 { CH = Limits_arith(CH, Convert.ToByte(mem), '-'); }
-                                else { CH = Limits_arith(CH, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); CH = Limits_arith(CH, second_param, '-'); }
                             }
                             else if (ops[0] == "CL")
                             {
                                 if (ops[1] == "mem")
                                 { CL = Limits_arith(CL, Convert.ToByte(mem), '-'); }
-                                else { CL = Limits_arith(CL, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); CL = Limits_arith(CL, second_param, '-'); }
                             }
                             else if (ops[0] == "DX" || ops[0] == "DH")
                             {
                                 if (ops[1] == "mem")
                                 { DH = Limits_arith(DH, Convert.ToByte(mem), '-'); }
-                                else { DH = Limits_arith(DH, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); DH = Limits_arith(DH, second_param, '-'); }
                             }
                             else if (ops[0] == "DL")
                             {
                                 if (ops[1] == "mem")
                                 { DL = Limits_arith(DL, Convert.ToByte(mem), '-'); }
-                                else { DL = Limits_arith(DL, Convert.ToByte(ops[1]), '-'); }
+                                else { second_param = Convert.ToByte(Converter_to_int16(ops[1])); DL = Limits_arith(DL, second_param, '-'); }
                             }
                         }
                         else if (Is_register(ops[0]) && Is_register(ops[1]))
@@ -3602,9 +3606,28 @@ namespace Intel_8086
             else { return 0; }
         }
 
+        private short Converter_to_int16(string number)
+        {
+            short new_number;
+
+            if (!Int16.TryParse(number, out new_number))
+            {
+                for (int i = 0; i < number.Length; i++)
+                {
+                    new_number += Convert.ToInt16(number[0]);
+                }
+            }
+            else
+            {
+                new_number = Convert.ToInt16(number);
+            }
+
+            return new_number;
+        }
+
         private short Limits(string ops ,string n)  // TO MOV
         {
-            short numb = Convert.ToInt16(n);
+            short numb = Converter_to_int16(n);
 
             if (ops == "AX" || ops == "AH" || ops == "AL" || ops == "BX" || ops == "BH" || ops == "BL" || ops == "CX" || ops == "CH" || ops == "CL" || ops == "DX" || ops == "DH" || ops == "DL")
             {
@@ -3898,10 +3921,3 @@ namespace Intel_8086
         }
     }
 }
-
-/*  TO DO:
- *  
- *  1. Logical instructions (OR, XOR, AND (1/2) ...)
- *  2. ...
- *  
- */
