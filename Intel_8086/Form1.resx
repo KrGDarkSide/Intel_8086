@@ -117,11 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 143</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 2</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 144</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 2</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 55</value>
   </data>
@@ -144,7 +193,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -171,7 +220,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Clear.Location" type="System.Drawing.Point, System.Drawing">
     <value>463, 68</value>
@@ -195,7 +244,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;Clear.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="RUN.Location" type="System.Drawing.Point, System.Drawing">
     <value>407, 68</value>
@@ -219,7 +268,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;RUN.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="Operation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt, style=Bold</value>
@@ -227,7 +276,6 @@
   <data name="Operation.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 28</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Operation.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -247,7 +295,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;Operation.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Instruction.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -274,580 +322,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;Instruction.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="CMP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CMP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 381</value>
-  </data>
-  <data name="CMP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="CMP.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="CMP.Text" xml:space="preserve">
-    <value>CMP</value>
-  </data>
-  <data name="&gt;&gt;CMP.Name" xml:space="preserve">
-    <value>CMP</value>
-  </data>
-  <data name="&gt;&gt;CMP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CMP.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;CMP.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="JMP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JMP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 381</value>
-  </data>
-  <data name="JMP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="JMP.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="JMP.Text" xml:space="preserve">
-    <value>JMP</value>
-  </data>
-  <data name="&gt;&gt;JMP.Name" xml:space="preserve">
-    <value>JMP</value>
-  </data>
-  <data name="&gt;&gt;JMP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JMP.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JMP.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="CALL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CALL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 381</value>
-  </data>
-  <data name="CALL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="CALL.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="CALL.Text" xml:space="preserve">
-    <value>CALL</value>
-  </data>
-  <data name="&gt;&gt;CALL.Name" xml:space="preserve">
-    <value>CALL</value>
-  </data>
-  <data name="&gt;&gt;CALL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CALL.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;CALL.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="JNBE_JA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JNBE_JA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 373</value>
-  </data>
-  <data name="JNBE_JA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JNBE_JA.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="JNBE_JA.Text" xml:space="preserve">
-    <value>JNBE/JA</value>
-  </data>
-  <data name="&gt;&gt;JNBE_JA.Name" xml:space="preserve">
-    <value>JNBE_JA</value>
-  </data>
-  <data name="&gt;&gt;JNBE_JA.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JNBE_JA.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JNBE_JA.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="JNB_JAE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JNB_JAE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, 342</value>
-  </data>
-  <data name="JNB_JAE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JNB_JAE.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="JNB_JAE.Text" xml:space="preserve">
-    <value>JNB/JAE</value>
-  </data>
-  <data name="&gt;&gt;JNB_JAE.Name" xml:space="preserve">
-    <value>JNB_JAE</value>
-  </data>
-  <data name="&gt;&gt;JNB_JAE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JNB_JAE.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JNB_JAE.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="JNLE_JG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JNLE_JG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 311</value>
-  </data>
-  <data name="JNLE_JG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JNLE_JG.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="JNLE_JG.Text" xml:space="preserve">
-    <value>JNLE/JG</value>
-  </data>
-  <data name="&gt;&gt;JNLE_JG.Name" xml:space="preserve">
-    <value>JNLE_JG</value>
-  </data>
-  <data name="&gt;&gt;JNLE_JG.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JNLE_JG.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JNLE_JG.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="JNL_JGE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JNL_JGE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 280</value>
-  </data>
-  <data name="JNL_JGE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JNL_JGE.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="JNL_JGE.Text" xml:space="preserve">
-    <value>JNL/JGE</value>
-  </data>
-  <data name="&gt;&gt;JNL_JGE.Name" xml:space="preserve">
-    <value>JNL_JGE</value>
-  </data>
-  <data name="&gt;&gt;JNL_JGE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JNL_JGE.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JNL_JGE.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="JNE_JNZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JNE_JNZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 342</value>
-  </data>
-  <data name="JNE_JNZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JNE_JNZ.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="JNE_JNZ.Text" xml:space="preserve">
-    <value>JNE/JNZ</value>
-  </data>
-  <data name="&gt;&gt;JNE_JNZ.Name" xml:space="preserve">
-    <value>JNE_JNZ</value>
-  </data>
-  <data name="&gt;&gt;JNE_JNZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JNE_JNZ.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JNE_JNZ.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="JBE_JNA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JBE_JNA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 311</value>
-  </data>
-  <data name="JBE_JNA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JBE_JNA.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="JBE_JNA.Text" xml:space="preserve">
-    <value>JBE/JNA</value>
-  </data>
-  <data name="&gt;&gt;JBE_JNA.Name" xml:space="preserve">
-    <value>JBE_JNA</value>
-  </data>
-  <data name="&gt;&gt;JBE_JNA.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JBE_JNA.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JBE_JNA.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="JB_JNAF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JB_JNAF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 280</value>
-  </data>
-  <data name="JB_JNAF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JB_JNAF.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="JB_JNAF.Text" xml:space="preserve">
-    <value>JB/JNAF</value>
-  </data>
-  <data name="&gt;&gt;JB_JNAF.Name" xml:space="preserve">
-    <value>JB_JNAF</value>
-  </data>
-  <data name="&gt;&gt;JB_JNAF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JB_JNAF.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JB_JNAF.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="JLE_JNG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JLE_JNG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 342</value>
-  </data>
-  <data name="JLE_JNG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JLE_JNG.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="JLE_JNG.Text" xml:space="preserve">
-    <value>JLE/JNG</value>
-  </data>
-  <data name="&gt;&gt;JLE_JNG.Name" xml:space="preserve">
-    <value>JLE_JNG</value>
-  </data>
-  <data name="&gt;&gt;JLE_JNG.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JLE_JNG.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JLE_JNG.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="JL_JNEG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JL_JNEG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 311</value>
-  </data>
-  <data name="JL_JNEG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JL_JNEG.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="JL_JNEG.Text" xml:space="preserve">
-    <value>JL/JNEG</value>
-  </data>
-  <data name="&gt;&gt;JL_JNEG.Name" xml:space="preserve">
-    <value>JL_JNEG</value>
-  </data>
-  <data name="&gt;&gt;JL_JNEG.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JL_JNEG.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JL_JNEG.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="JE_JZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="JE_JZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 280</value>
-  </data>
-  <data name="JE_JZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
-  </data>
-  <data name="JE_JZ.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="JE_JZ.Text" xml:space="preserve">
-    <value>JE/JZ</value>
-  </data>
-  <data name="&gt;&gt;JE_JZ.Name" xml:space="preserve">
-    <value>JE_JZ</value>
-  </data>
-  <data name="&gt;&gt;JE_JZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;JE_JZ.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;JE_JZ.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="line5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="line5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 275</value>
-  </data>
-  <data name="line5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 2</value>
-  </data>
-  <data name="line5.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;line5.Name" xml:space="preserve">
-    <value>line5</value>
-  </data>
-  <data name="&gt;&gt;line5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;line5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;line5.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 259</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 16</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Jump</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="IRET.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="IRET.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 165</value>
-  </data>
-  <data name="IRET.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="IRET.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="IRET.Text" xml:space="preserve">
-    <value>IRET</value>
-  </data>
-  <data name="&gt;&gt;IRET.Name" xml:space="preserve">
-    <value>IRET</value>
-  </data>
-  <data name="&gt;&gt;IRET.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IRET.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;IRET.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="RET.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RET.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 165</value>
-  </data>
-  <data name="RET.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="RET.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="RET.Text" xml:space="preserve">
-    <value>RET</value>
-  </data>
-  <data name="&gt;&gt;RET.Name" xml:space="preserve">
-    <value>RET</value>
-  </data>
-  <data name="&gt;&gt;RET.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RET.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;RET.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="INTO.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="INTO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 130</value>
-  </data>
-  <data name="INTO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="INTO.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="INTO.Text" xml:space="preserve">
-    <value>INTO</value>
-  </data>
-  <data name="&gt;&gt;INTO.Name" xml:space="preserve">
-    <value>INTO</value>
-  </data>
-  <data name="&gt;&gt;INTO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;INTO.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;INTO.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="INT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="INT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 130</value>
-  </data>
-  <data name="INT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="INT.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="INT.Text" xml:space="preserve">
-    <value>INT</value>
-  </data>
-  <data name="&gt;&gt;INT.Name" xml:space="preserve">
-    <value>INT</value>
-  </data>
-  <data name="&gt;&gt;INT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;INT.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;INT.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="Line4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 124</value>
-  </data>
-  <data name="Line4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 2</value>
-  </data>
-  <data name="Line4.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;Line4.Name" xml:space="preserve">
-    <value>Line4</value>
-  </data>
-  <data name="&gt;&gt;Line4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Line4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;Line4.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 108</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 16</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Interrupt</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>26</value>
   </data>
   <data name="CMC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CMC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 226</value>
+    <value>407, 280</value>
   </data>
   <data name="CMC.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -868,13 +349,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;CMC.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>8</value>
   </data>
   <data name="STI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="STI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 191</value>
+    <value>447, 240</value>
   </data>
   <data name="STI.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -895,13 +376,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;STI.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>9</value>
   </data>
   <data name="STD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="STD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 160</value>
+    <value>447, 198</value>
   </data>
   <data name="STD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -922,13 +403,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;STD.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>10</value>
   </data>
   <data name="STC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="STC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 129</value>
+    <value>447, 157</value>
   </data>
   <data name="STC.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -949,13 +430,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;STC.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>11</value>
   </data>
   <data name="CLI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CLI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 191</value>
+    <value>364, 240</value>
   </data>
   <data name="CLI.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -976,13 +457,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;CLI.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>12</value>
   </data>
   <data name="CLD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CLD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 160</value>
+    <value>364, 198</value>
   </data>
   <data name="CLD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1003,10 +484,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;CLD.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>13</value>
   </data>
   <data name="CLC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 129</value>
+    <value>364, 157</value>
   </data>
   <data name="CLC.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1027,7 +508,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;CLC.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>14</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1036,7 +517,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 108</value>
+    <value>382, 127</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 16</value>
@@ -1057,256 +538,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="TEST.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="TEST.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 381</value>
-  </data>
-  <data name="TEST.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="TEST.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="TEST.Text" xml:space="preserve">
-    <value>TEST</value>
-  </data>
-  <data name="&gt;&gt;TEST.Name" xml:space="preserve">
-    <value>TEST</value>
-  </data>
-  <data name="&gt;&gt;TEST.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TEST.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;TEST.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="RCR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RCR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 342</value>
-  </data>
-  <data name="RCR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="RCR.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="RCR.Text" xml:space="preserve">
-    <value>RCR</value>
-  </data>
-  <data name="&gt;&gt;RCR.Name" xml:space="preserve">
-    <value>RCR</value>
-  </data>
-  <data name="&gt;&gt;RCR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RCR.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;RCR.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="RCL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RCL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 311</value>
-  </data>
-  <data name="RCL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="RCL.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="RCL.Text" xml:space="preserve">
-    <value>RCL</value>
-  </data>
-  <data name="&gt;&gt;RCL.Name" xml:space="preserve">
-    <value>RCL</value>
-  </data>
-  <data name="&gt;&gt;RCL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RCL.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;RCL.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="ROR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ROR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 280</value>
-  </data>
-  <data name="ROR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="ROR.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="ROR.Text" xml:space="preserve">
-    <value>ROR</value>
-  </data>
-  <data name="&gt;&gt;ROR.Name" xml:space="preserve">
-    <value>ROR</value>
-  </data>
-  <data name="&gt;&gt;ROR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ROR.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;ROR.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="ROL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ROL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 249</value>
-  </data>
-  <data name="ROL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="ROL.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="ROL.Text" xml:space="preserve">
-    <value>ROL</value>
-  </data>
-  <data name="&gt;&gt;ROL.Name" xml:space="preserve">
-    <value>ROL</value>
-  </data>
-  <data name="&gt;&gt;ROL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ROL.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;ROL.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <data name="SAR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SAR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 357</value>
-  </data>
-  <data name="SAR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="SAR.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="SAR.Text" xml:space="preserve">
-    <value>SAR</value>
-  </data>
-  <data name="&gt;&gt;SAR.Name" xml:space="preserve">
-    <value>SAR</value>
-  </data>
-  <data name="&gt;&gt;SAR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SAR.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;SAR.ZOrder" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="SHR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 357</value>
-  </data>
-  <data name="SHR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="SHR.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="SHR.Text" xml:space="preserve">
-    <value>SHR</value>
-  </data>
-  <data name="&gt;&gt;SHR.Name" xml:space="preserve">
-    <value>SHR</value>
-  </data>
-  <data name="&gt;&gt;SHR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHR.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;SHR.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="SAL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SAL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 326</value>
-  </data>
-  <data name="SAL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="SAL.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="SAL.Text" xml:space="preserve">
-    <value>SAL</value>
-  </data>
-  <data name="&gt;&gt;SAL.Name" xml:space="preserve">
-    <value>SAL</value>
-  </data>
-  <data name="&gt;&gt;SAL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SAL.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;SAL.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
-  <data name="SHL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 326</value>
-  </data>
-  <data name="SHL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="SHL.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="SHL.Text" xml:space="preserve">
-    <value>SHL</value>
-  </data>
-  <data name="&gt;&gt;SHL.Name" xml:space="preserve">
-    <value>SHL</value>
-  </data>
-  <data name="&gt;&gt;SHL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHL.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;SHL.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>15</value>
   </data>
   <data name="XOR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="XOR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 280</value>
+    <value>463, 429</value>
   </data>
   <data name="XOR.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1327,13 +565,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;XOR.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>16</value>
   </data>
   <data name="OR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="OR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 249</value>
+    <value>463, 387</value>
   </data>
   <data name="OR.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1354,13 +592,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;OR.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>17</value>
   </data>
   <data name="AND.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="AND.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 280</value>
+    <value>388, 429</value>
   </data>
   <data name="AND.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1381,10 +619,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AND.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>18</value>
   </data>
   <data name="NOT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 249</value>
+    <value>388, 387</value>
   </data>
   <data name="NOT.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1405,7 +643,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;NOT.ZOrder" xml:space="preserve">
-    <value>47</value>
+    <value>19</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1414,7 +652,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 226</value>
+    <value>382, 351</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 16</value>
@@ -1435,13 +673,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>48</value>
+    <value>20</value>
+  </data>
+  <data name="line3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="line3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, 242</value>
+    <value>381, 367</value>
   </data>
   <data name="line3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 4</value>
+    <value>140, 2</value>
   </data>
   <data name="line3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1456,10 +697,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;line3.ZOrder" xml:space="preserve">
-    <value>49</value>
+    <value>21</value>
   </data>
   <data name="SAHF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 187</value>
+    <value>181, 240</value>
   </data>
   <data name="SAHF.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1480,10 +721,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SAHF.ZOrder" xml:space="preserve">
-    <value>50</value>
+    <value>22</value>
   </data>
   <data name="LAHF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 158</value>
+    <value>181, 199</value>
   </data>
   <data name="LAHF.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1504,10 +745,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;LAHF.ZOrder" xml:space="preserve">
-    <value>51</value>
+    <value>23</value>
   </data>
   <data name="LEA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 127</value>
+    <value>181, 157</value>
   </data>
   <data name="LEA.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1528,10 +769,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;LEA.ZOrder" xml:space="preserve">
-    <value>52</value>
+    <value>24</value>
   </data>
   <data name="POPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 187</value>
+    <value>106, 240</value>
   </data>
   <data name="POPF.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1552,13 +793,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;POPF.ZOrder" xml:space="preserve">
-    <value>53</value>
+    <value>25</value>
   </data>
   <data name="PUSHF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="PUSHF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 158</value>
+    <value>106, 199</value>
   </data>
   <data name="PUSHF.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1579,10 +820,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;PUSHF.ZOrder" xml:space="preserve">
-    <value>54</value>
+    <value>26</value>
   </data>
   <data name="POP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 187</value>
+    <value>34, 240</value>
   </data>
   <data name="POP.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1603,10 +844,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;POP.ZOrder" xml:space="preserve">
-    <value>55</value>
+    <value>27</value>
   </data>
   <data name="PUSH.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 158</value>
+    <value>34, 199</value>
   </data>
   <data name="PUSH.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1627,10 +868,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;PUSH.ZOrder" xml:space="preserve">
-    <value>56</value>
+    <value>28</value>
   </data>
   <data name="XCHG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 127</value>
+    <value>106, 157</value>
   </data>
   <data name="XCHG.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1651,10 +892,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;XCHG.ZOrder" xml:space="preserve">
-    <value>57</value>
+    <value>29</value>
   </data>
   <data name="MOV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 127</value>
+    <value>34, 157</value>
   </data>
   <data name="MOV.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 25</value>
@@ -1675,7 +916,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;MOV.ZOrder" xml:space="preserve">
-    <value>58</value>
+    <value>30</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1684,7 +925,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 108</value>
+    <value>14, 127</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 16</value>
@@ -1705,7 +946,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>59</value>
+    <value>31</value>
   </data>
   <data name="line2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1729,7 +970,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;line2.ZOrder" xml:space="preserve">
-    <value>60</value>
+    <value>32</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1738,7 +979,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 397</value>
+    <value>14, 351</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 16</value>
@@ -1759,13 +1000,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>61</value>
+    <value>33</value>
   </data>
   <data name="line1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, 413</value>
+    <value>13, 367</value>
   </data>
   <data name="line1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 10</value>
+    <value>286, 2</value>
   </data>
   <data name="line1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1780,10 +1021,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;line1.ZOrder" xml:space="preserve">
-    <value>62</value>
+    <value>34</value>
   </data>
   <data name="IDIV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 467</value>
+    <value>250, 429</value>
   </data>
   <data name="IDIV.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1804,10 +1045,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;IDIV.ZOrder" xml:space="preserve">
-    <value>63</value>
+    <value>35</value>
   </data>
   <data name="IMUL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 425</value>
+    <value>250, 387</value>
   </data>
   <data name="IMUL.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1828,10 +1069,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;IMUL.ZOrder" xml:space="preserve">
-    <value>64</value>
+    <value>36</value>
   </data>
   <data name="AAS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 467</value>
+    <value>190, 429</value>
   </data>
   <data name="AAS.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1852,10 +1093,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AAS.ZOrder" xml:space="preserve">
-    <value>65</value>
+    <value>37</value>
   </data>
   <data name="AAA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 425</value>
+    <value>190, 387</value>
   </data>
   <data name="AAA.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1876,10 +1117,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AAA.ZOrder" xml:space="preserve">
-    <value>66</value>
+    <value>38</value>
   </data>
   <data name="DEC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 467</value>
+    <value>129, 429</value>
   </data>
   <data name="DEC.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1900,10 +1141,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;DEC.ZOrder" xml:space="preserve">
-    <value>67</value>
+    <value>39</value>
   </data>
   <data name="INC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 425</value>
+    <value>129, 387</value>
   </data>
   <data name="INC.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -1924,10 +1165,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;INC.ZOrder" xml:space="preserve">
-    <value>68</value>
+    <value>40</value>
   </data>
   <data name="DIV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 467</value>
+    <value>69, 429</value>
   </data>
   <data name="DIV.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1948,10 +1189,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;DIV.ZOrder" xml:space="preserve">
-    <value>69</value>
+    <value>41</value>
   </data>
   <data name="MUL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 467</value>
+    <value>34, 429</value>
   </data>
   <data name="MUL.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1972,10 +1213,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;MUL.ZOrder" xml:space="preserve">
-    <value>70</value>
+    <value>42</value>
   </data>
   <data name="SUB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 425</value>
+    <value>69, 387</value>
   </data>
   <data name="SUB.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -1996,10 +1237,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SUB.ZOrder" xml:space="preserve">
-    <value>71</value>
+    <value>43</value>
   </data>
   <data name="ADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 425</value>
+    <value>34, 387</value>
   </data>
   <data name="ADD.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -2020,7 +1261,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;ADD.ZOrder" xml:space="preserve">
-    <value>72</value>
+    <value>44</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>

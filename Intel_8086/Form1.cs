@@ -38,13 +38,6 @@ namespace Intel_8086
         short DI = 0;   // Destination Index
         short IP = 0;   // Instruction Pointer
 
-        // SEGMENT REGISTERS:
-
-        //short CS = 0;   // Code Segment
-        //short DS = 0;   // Data Segment
-        //short SS = 0;   // Stack Segment
-        //short ES = 0;   // Extra Segment
-
         // FLAGS
 
         bool SF = false;    // Sign Flag
@@ -212,60 +205,6 @@ namespace Intel_8086
             Instruction.Text = "XOR";
         }
 
-        // TEST
-        private void TEST_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "TEST";
-        }
-
-        // SHL
-        private void SHL_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "SHL";
-        }
-
-        // SHR
-        private void SHR_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "SHR";
-        }
-
-        // SAL
-        private void SAL_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "SAL";
-        }
-
-        // SAR
-        private void SAR_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "SAR";
-        }
-
-        // ROL
-        private void ROL_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "ROL";
-        }
-
-        // ROR
-        private void ROR_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "ROR";
-        }
-
-        // RCL
-        private void RCL_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "RCL";
-        }
-
-        // RCR
-        private void RCR_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "RCR";
-        }
-
 // FLAGS MANIPULATION INSTRUCTIONS:
 
         // CLC
@@ -308,112 +247,6 @@ namespace Intel_8086
         private void CMC_Click(object sender, EventArgs e)
         {
             Instruction.Text = "CMC";
-        }
-
-// JUMP INSTRUCTIONS:
-
-        // JE/JZ
-        private void JE_JZ_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JE/JZ";
-        }
-
-        // JL/JNEG
-        private void JL_JNEG_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JL/JNEG";
-        }
-
-        // JLE/JNG
-        private void JLE_JNG_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JLE/JNG";
-        }
-
-        // JB/JNAF
-        private void JB_JNAF_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JB/JNAF";
-        }
-
-        // JBE/JNA
-        private void JBE_JNA_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JBE/JNA";
-        }
-
-        // JNE/JNZ
-        private void JNE_JNZ_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JNE/JNZ";
-        }
-
-        // JNL/JGE
-        private void JNL_JGE_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JNL/JGE";
-        }
-
-        // JNLE/JG
-        private void JNLE_JG_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JNLE/JG";
-        }
-
-        // JNB/JAE
-        private void JNB_JAE_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JNB/JAE";
-        }
-
-        // JNBE/JA
-        private void JNBE_JA_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JNBE/JA";
-        }
-
-        // CALL
-        private void CALL_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "CALL";
-        }
-
-        // JMP
-        private void JMP_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "JMP";
-        }
-
-        // CMP
-        private void CMP_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "CMP";
-        }
-
-// INTERRUPT INSTRUCTIONS:
-
-        // INT
-        private void INT_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "INT";
-        }
-
-        // INTO
-        private void INTO_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "INTO";
-        }
-
-        // RET
-        private void RET_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "RET";
-        }
-
-        // IRET
-        private void IRET_Click(object sender, EventArgs e)
-        {
-            Instruction.Text = "IRET";
         }
 
 
@@ -3451,33 +3284,6 @@ namespace Intel_8086
                     {
                         MessageBox.Show("Use -->\n{ XOR   REG, mem }\n{ XOR   REG, REG }\n{ XOR   mem, REG }");
                     }
-                    break;
-
-                case "TEST":
-                    break;
-
-                case "SHL":
-                    break;
-
-                case "SHR":
-                    break;
-
-                case "SAL":
-                    break;
-
-                case "SAR":
-                    break;
-
-                case "ROL":
-                    break;
-
-                case "ROR":
-                    break;
-
-                case "RCL":
-                    break;
-
-                case "RCR":
                     break;
 
                 // FLAGS MANIPULATIONS

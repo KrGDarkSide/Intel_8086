@@ -38,27 +38,6 @@ namespace Intel_8086
             this.RUN = new System.Windows.Forms.Button();
             this.Operation = new System.Windows.Forms.TextBox();
             this.Instruction = new System.Windows.Forms.TextBox();
-            this.CMP = new System.Windows.Forms.Button();
-            this.JMP = new System.Windows.Forms.Button();
-            this.CALL = new System.Windows.Forms.Button();
-            this.JNBE_JA = new System.Windows.Forms.Button();
-            this.JNB_JAE = new System.Windows.Forms.Button();
-            this.JNLE_JG = new System.Windows.Forms.Button();
-            this.JNL_JGE = new System.Windows.Forms.Button();
-            this.JNE_JNZ = new System.Windows.Forms.Button();
-            this.JBE_JNA = new System.Windows.Forms.Button();
-            this.JB_JNAF = new System.Windows.Forms.Button();
-            this.JLE_JNG = new System.Windows.Forms.Button();
-            this.JL_JNEG = new System.Windows.Forms.Button();
-            this.JE_JZ = new System.Windows.Forms.Button();
-            this.line5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.IRET = new System.Windows.Forms.Button();
-            this.RET = new System.Windows.Forms.Button();
-            this.INTO = new System.Windows.Forms.Button();
-            this.INT = new System.Windows.Forms.Button();
-            this.Line4 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.CMC = new System.Windows.Forms.Button();
             this.STI = new System.Windows.Forms.Button();
             this.STD = new System.Windows.Forms.Button();
@@ -67,15 +46,6 @@ namespace Intel_8086
             this.CLD = new System.Windows.Forms.Button();
             this.CLC = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TEST = new System.Windows.Forms.Button();
-            this.RCR = new System.Windows.Forms.Button();
-            this.RCL = new System.Windows.Forms.Button();
-            this.ROR = new System.Windows.Forms.Button();
-            this.ROL = new System.Windows.Forms.Button();
-            this.SAR = new System.Windows.Forms.Button();
-            this.SHR = new System.Windows.Forms.Button();
-            this.SAL = new System.Windows.Forms.Button();
-            this.SHL = new System.Windows.Forms.Button();
             this.XOR = new System.Windows.Forms.Button();
             this.OR = new System.Windows.Forms.Button();
             this.AND = new System.Windows.Forms.Button();
@@ -110,6 +80,8 @@ namespace Intel_8086
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.flagsReg = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -124,33 +96,14 @@ namespace Intel_8086
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.Clear);
             this.tabPage1.Controls.Add(this.RUN);
             this.tabPage1.Controls.Add(this.Operation);
             this.tabPage1.Controls.Add(this.Instruction);
-            this.tabPage1.Controls.Add(this.CMP);
-            this.tabPage1.Controls.Add(this.JMP);
-            this.tabPage1.Controls.Add(this.CALL);
-            this.tabPage1.Controls.Add(this.JNBE_JA);
-            this.tabPage1.Controls.Add(this.JNB_JAE);
-            this.tabPage1.Controls.Add(this.JNLE_JG);
-            this.tabPage1.Controls.Add(this.JNL_JGE);
-            this.tabPage1.Controls.Add(this.JNE_JNZ);
-            this.tabPage1.Controls.Add(this.JBE_JNA);
-            this.tabPage1.Controls.Add(this.JB_JNAF);
-            this.tabPage1.Controls.Add(this.JLE_JNG);
-            this.tabPage1.Controls.Add(this.JL_JNEG);
-            this.tabPage1.Controls.Add(this.JE_JZ);
-            this.tabPage1.Controls.Add(this.line5);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.IRET);
-            this.tabPage1.Controls.Add(this.RET);
-            this.tabPage1.Controls.Add(this.INTO);
-            this.tabPage1.Controls.Add(this.INT);
-            this.tabPage1.Controls.Add(this.Line4);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.CMC);
             this.tabPage1.Controls.Add(this.STI);
             this.tabPage1.Controls.Add(this.STD);
@@ -159,15 +112,6 @@ namespace Intel_8086
             this.tabPage1.Controls.Add(this.CLD);
             this.tabPage1.Controls.Add(this.CLC);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.TEST);
-            this.tabPage1.Controls.Add(this.RCR);
-            this.tabPage1.Controls.Add(this.RCL);
-            this.tabPage1.Controls.Add(this.ROR);
-            this.tabPage1.Controls.Add(this.ROL);
-            this.tabPage1.Controls.Add(this.SAR);
-            this.tabPage1.Controls.Add(this.SHR);
-            this.tabPage1.Controls.Add(this.SAL);
-            this.tabPage1.Controls.Add(this.SHL);
             this.tabPage1.Controls.Add(this.XOR);
             this.tabPage1.Controls.Add(this.OR);
             this.tabPage1.Controls.Add(this.AND);
@@ -242,147 +186,6 @@ namespace Intel_8086
             this.Instruction.ReadOnly = true;
             this.Instruction.TextChanged += new System.EventHandler(this.Instruction_TextChanged);
             // 
-            // CMP
-            // 
-            resources.ApplyResources(this.CMP, "CMP");
-            this.CMP.Name = "CMP";
-            this.CMP.UseVisualStyleBackColor = true;
-            this.CMP.Click += new System.EventHandler(this.CMP_Click);
-            // 
-            // JMP
-            // 
-            resources.ApplyResources(this.JMP, "JMP");
-            this.JMP.Name = "JMP";
-            this.JMP.UseVisualStyleBackColor = true;
-            this.JMP.Click += new System.EventHandler(this.JMP_Click);
-            // 
-            // CALL
-            // 
-            resources.ApplyResources(this.CALL, "CALL");
-            this.CALL.Name = "CALL";
-            this.CALL.UseVisualStyleBackColor = true;
-            this.CALL.Click += new System.EventHandler(this.CALL_Click);
-            // 
-            // JNBE_JA
-            // 
-            resources.ApplyResources(this.JNBE_JA, "JNBE_JA");
-            this.JNBE_JA.Name = "JNBE_JA";
-            this.JNBE_JA.UseVisualStyleBackColor = true;
-            this.JNBE_JA.Click += new System.EventHandler(this.JNBE_JA_Click);
-            // 
-            // JNB_JAE
-            // 
-            resources.ApplyResources(this.JNB_JAE, "JNB_JAE");
-            this.JNB_JAE.Name = "JNB_JAE";
-            this.JNB_JAE.UseVisualStyleBackColor = true;
-            this.JNB_JAE.Click += new System.EventHandler(this.JNB_JAE_Click);
-            // 
-            // JNLE_JG
-            // 
-            resources.ApplyResources(this.JNLE_JG, "JNLE_JG");
-            this.JNLE_JG.Name = "JNLE_JG";
-            this.JNLE_JG.UseVisualStyleBackColor = true;
-            this.JNLE_JG.Click += new System.EventHandler(this.JNLE_JG_Click);
-            // 
-            // JNL_JGE
-            // 
-            resources.ApplyResources(this.JNL_JGE, "JNL_JGE");
-            this.JNL_JGE.Name = "JNL_JGE";
-            this.JNL_JGE.UseVisualStyleBackColor = true;
-            this.JNL_JGE.Click += new System.EventHandler(this.JNL_JGE_Click);
-            // 
-            // JNE_JNZ
-            // 
-            resources.ApplyResources(this.JNE_JNZ, "JNE_JNZ");
-            this.JNE_JNZ.Name = "JNE_JNZ";
-            this.JNE_JNZ.UseVisualStyleBackColor = true;
-            this.JNE_JNZ.Click += new System.EventHandler(this.JNE_JNZ_Click);
-            // 
-            // JBE_JNA
-            // 
-            resources.ApplyResources(this.JBE_JNA, "JBE_JNA");
-            this.JBE_JNA.Name = "JBE_JNA";
-            this.JBE_JNA.UseVisualStyleBackColor = true;
-            this.JBE_JNA.Click += new System.EventHandler(this.JBE_JNA_Click);
-            // 
-            // JB_JNAF
-            // 
-            resources.ApplyResources(this.JB_JNAF, "JB_JNAF");
-            this.JB_JNAF.Name = "JB_JNAF";
-            this.JB_JNAF.UseVisualStyleBackColor = true;
-            this.JB_JNAF.Click += new System.EventHandler(this.JB_JNAF_Click);
-            // 
-            // JLE_JNG
-            // 
-            resources.ApplyResources(this.JLE_JNG, "JLE_JNG");
-            this.JLE_JNG.Name = "JLE_JNG";
-            this.JLE_JNG.UseVisualStyleBackColor = true;
-            this.JLE_JNG.Click += new System.EventHandler(this.JLE_JNG_Click);
-            // 
-            // JL_JNEG
-            // 
-            resources.ApplyResources(this.JL_JNEG, "JL_JNEG");
-            this.JL_JNEG.Name = "JL_JNEG";
-            this.JL_JNEG.UseVisualStyleBackColor = true;
-            this.JL_JNEG.Click += new System.EventHandler(this.JL_JNEG_Click);
-            // 
-            // JE_JZ
-            // 
-            resources.ApplyResources(this.JE_JZ, "JE_JZ");
-            this.JE_JZ.Name = "JE_JZ";
-            this.JE_JZ.UseVisualStyleBackColor = true;
-            this.JE_JZ.Click += new System.EventHandler(this.JE_JZ_Click);
-            // 
-            // line5
-            // 
-            this.line5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.line5, "line5");
-            this.line5.Name = "line5";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // IRET
-            // 
-            resources.ApplyResources(this.IRET, "IRET");
-            this.IRET.Name = "IRET";
-            this.IRET.UseVisualStyleBackColor = true;
-            this.IRET.Click += new System.EventHandler(this.IRET_Click);
-            // 
-            // RET
-            // 
-            resources.ApplyResources(this.RET, "RET");
-            this.RET.Name = "RET";
-            this.RET.UseVisualStyleBackColor = true;
-            this.RET.Click += new System.EventHandler(this.RET_Click);
-            // 
-            // INTO
-            // 
-            resources.ApplyResources(this.INTO, "INTO");
-            this.INTO.Name = "INTO";
-            this.INTO.UseVisualStyleBackColor = true;
-            this.INTO.Click += new System.EventHandler(this.INTO_Click);
-            // 
-            // INT
-            // 
-            resources.ApplyResources(this.INT, "INT");
-            this.INT.Name = "INT";
-            this.INT.UseVisualStyleBackColor = true;
-            this.INT.Click += new System.EventHandler(this.INT_Click);
-            // 
-            // Line4
-            // 
-            this.Line4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.Line4, "Line4");
-            this.Line4.Name = "Line4";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
             // CMC
             // 
             resources.ApplyResources(this.CMC, "CMC");
@@ -436,69 +239,6 @@ namespace Intel_8086
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            // 
-            // TEST
-            // 
-            resources.ApplyResources(this.TEST, "TEST");
-            this.TEST.Name = "TEST";
-            this.TEST.UseVisualStyleBackColor = true;
-            this.TEST.Click += new System.EventHandler(this.TEST_Click);
-            // 
-            // RCR
-            // 
-            resources.ApplyResources(this.RCR, "RCR");
-            this.RCR.Name = "RCR";
-            this.RCR.UseVisualStyleBackColor = true;
-            this.RCR.Click += new System.EventHandler(this.RCR_Click);
-            // 
-            // RCL
-            // 
-            resources.ApplyResources(this.RCL, "RCL");
-            this.RCL.Name = "RCL";
-            this.RCL.UseVisualStyleBackColor = true;
-            this.RCL.Click += new System.EventHandler(this.RCL_Click);
-            // 
-            // ROR
-            // 
-            resources.ApplyResources(this.ROR, "ROR");
-            this.ROR.Name = "ROR";
-            this.ROR.UseVisualStyleBackColor = true;
-            this.ROR.Click += new System.EventHandler(this.ROR_Click);
-            // 
-            // ROL
-            // 
-            resources.ApplyResources(this.ROL, "ROL");
-            this.ROL.Name = "ROL";
-            this.ROL.UseVisualStyleBackColor = true;
-            this.ROL.Click += new System.EventHandler(this.ROL_Click);
-            // 
-            // SAR
-            // 
-            resources.ApplyResources(this.SAR, "SAR");
-            this.SAR.Name = "SAR";
-            this.SAR.UseVisualStyleBackColor = true;
-            this.SAR.Click += new System.EventHandler(this.SAR_Click);
-            // 
-            // SHR
-            // 
-            resources.ApplyResources(this.SHR, "SHR");
-            this.SHR.Name = "SHR";
-            this.SHR.UseVisualStyleBackColor = true;
-            this.SHR.Click += new System.EventHandler(this.SHR_Click);
-            // 
-            // SAL
-            // 
-            resources.ApplyResources(this.SAL, "SAL");
-            this.SAL.Name = "SAL";
-            this.SAL.UseVisualStyleBackColor = true;
-            this.SAL.Click += new System.EventHandler(this.SAL_Click);
-            // 
-            // SHL
-            // 
-            resources.ApplyResources(this.SHL, "SHL");
-            this.SHL.Name = "SHL";
-            this.SHL.UseVisualStyleBackColor = true;
-            this.SHL.Click += new System.EventHandler(this.SHL_Click);
             // 
             // XOR
             // 
@@ -728,6 +468,18 @@ namespace Intel_8086
             this.flagsReg.ReadOnly = true;
             this.flagsReg.TextChanged += new System.EventHandler(this.flagsReg_TextChanged);
             // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // Int_8086
             // 
             resources.ApplyResources(this, "$this");
@@ -783,17 +535,7 @@ namespace Intel_8086
         private System.Windows.Forms.Button XOR;
         private System.Windows.Forms.Button OR;
         private System.Windows.Forms.Button AND;
-        private System.Windows.Forms.Button SAR;
-        private System.Windows.Forms.Button SHR;
-        private System.Windows.Forms.Button SAL;
-        private System.Windows.Forms.Button SHL;
-        private System.Windows.Forms.Button TEST;
-        private System.Windows.Forms.Button RCR;
-        private System.Windows.Forms.Button RCL;
-        private System.Windows.Forms.Button ROR;
-        private System.Windows.Forms.Button ROL;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button CLC;
         private System.Windows.Forms.Button STI;
         private System.Windows.Forms.Button STD;
@@ -801,26 +543,6 @@ namespace Intel_8086
         private System.Windows.Forms.Button CLI;
         private System.Windows.Forms.Button CLD;
         private System.Windows.Forms.Button CMC;
-        private System.Windows.Forms.Label Line4;
-        private System.Windows.Forms.Button IRET;
-        private System.Windows.Forms.Button RET;
-        private System.Windows.Forms.Button INTO;
-        private System.Windows.Forms.Button INT;
-        private System.Windows.Forms.Label line5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button JMP;
-        private System.Windows.Forms.Button CALL;
-        private System.Windows.Forms.Button JNBE_JA;
-        private System.Windows.Forms.Button JNB_JAE;
-        private System.Windows.Forms.Button JNLE_JG;
-        private System.Windows.Forms.Button JNL_JGE;
-        private System.Windows.Forms.Button JNE_JNZ;
-        private System.Windows.Forms.Button JBE_JNA;
-        private System.Windows.Forms.Button JB_JNAF;
-        private System.Windows.Forms.Button JLE_JNG;
-        private System.Windows.Forms.Button JL_JNEG;
-        private System.Windows.Forms.Button JE_JZ;
-        private System.Windows.Forms.Button CMP;
         private System.Windows.Forms.TextBox Operation;
         private System.Windows.Forms.TextBox Instruction;
         private System.Windows.Forms.Button Clear;
@@ -831,6 +553,8 @@ namespace Intel_8086
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox flagsReg;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }
 
