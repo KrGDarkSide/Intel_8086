@@ -69,7 +69,7 @@ namespace Intel_8086
             Instruction.Text = "MOV";
         }
 
-        // XCHG
+        // XCHG --> swap()
         private void XCHG_Click(object sender, EventArgs e)
         {
             Instruction.Text = "XCHG";
@@ -161,7 +161,7 @@ namespace Intel_8086
             Instruction.Text = "AAA";
         }
 
-        //AAS
+        // AAS
         private void AAS_Click(object sender, EventArgs e)
         {
             Instruction.Text = "AAS";
@@ -320,6 +320,34 @@ namespace Intel_8086
             Operation.Text = "";
             Stack_box.Text = "";
             flagsReg.Text = "";
+
+            AH = 0;
+            AL = 0;
+            BH = 0;
+            BL = 0;
+            CH = 0;
+            CL = 0;
+            DH = 0;
+            DL = 0;
+
+            SI = 0;
+            DI = 0;
+            IP = 0;
+            SP = 0;
+            BP = 0;
+
+            SF = false;
+            ZF = false;
+            PF = false;
+            AF = false;
+            CF = false;
+            OF = false;
+            IF = false;
+            DF = false;
+            TF = false;
+
+            mem = 0;
+            the_stack.Clear();
         }
 
         // View --> shows the contents of the register 
@@ -648,7 +676,7 @@ namespace Intel_8086
                         }
                         else
                         {
-                            the_stack.Push(Convert.ToByte(ops[0]));
+                            the_stack.Push(Convert.ToByte(Converter_to_int16(ops[0])));
                         }
                     }
                     break;
