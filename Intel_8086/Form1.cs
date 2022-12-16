@@ -689,29 +689,33 @@ namespace Intel_8086
                     break;
 
                 case "POP":
-                    if (ops.Count == 1)
+                    if (ops.Count == 1 && SP > 0)
                     {
                         if (Is_register(ops[0]))
                         {
                             switch(ops[0])
                             {
                                 case "AX":
-                                    AL = the_stack.ElementAt(SP - 1);
+                                    AL = the_stack.ElementAt(SP - 2);
+                                    the_stack.Pop();
                                     AH = the_stack.ElementAt(SP - 2);
                                     the_stack.Pop();
                                     break;
                                 case "BX":
-                                    BL = the_stack.ElementAt(SP - 1);
+                                    BL = the_stack.ElementAt(SP - 2);
+                                    the_stack.Pop();
                                     BH = the_stack.ElementAt(SP - 2);
                                     the_stack.Pop();
                                     break;
                                 case "CX":
-                                    CL = the_stack.ElementAt(SP - 1);
+                                    CL = the_stack.ElementAt(SP - 2);
+                                    the_stack.Pop();
                                     CH = the_stack.ElementAt(SP - 2);
                                     the_stack.Pop();
                                     break;
                                 case "DX":
-                                    DL = the_stack.ElementAt(SP - 1);
+                                    DL = the_stack.ElementAt(SP - 2);
+                                    the_stack.Pop();
                                     DH = the_stack.ElementAt(SP - 2);
                                     the_stack.Pop();
                                     break;
