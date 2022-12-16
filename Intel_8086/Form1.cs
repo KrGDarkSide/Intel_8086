@@ -1640,7 +1640,14 @@ namespace Intel_8086
                                 else { MessageBox.Show("Wrong operands."); }
                             }
                         }
-                        else { MessageBox.Show("You will not see that operation in \"View\" window."); }
+                        else 
+                        {
+                            short sum = 0;
+                            sum += Converter_to_int16(ops[0]);
+                            sum += Converter_to_int16(ops[1]);
+
+                            MessageBox.Show("You will not see that operation in \"View\" window.\n\nYour sum is: " + sum); 
+                        }
                     }
                     else
                     {
@@ -1795,7 +1802,14 @@ namespace Intel_8086
                                 else { MessageBox.Show("Wrong operands."); }
                             }
                         }
-                        else { MessageBox.Show("You will not see that operation in \"View\" window."); }
+                        else 
+                        {
+                            short subtraction = 0;
+                            subtraction += Converter_to_int16(ops[0]);
+                            subtraction -= Converter_to_int16(ops[1]);
+
+                            MessageBox.Show("You will not see that operation in \"View\" window.\n\nYour subtraction: " + subtraction); 
+                        }
                     }
                     else
                     {
