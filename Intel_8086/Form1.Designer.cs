@@ -32,36 +32,14 @@ namespace Intel_8086
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Int_8086));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Clear = new System.Windows.Forms.Button();
             this.RUN = new System.Windows.Forms.Button();
             this.Operation = new System.Windows.Forms.TextBox();
             this.Instruction = new System.Windows.Forms.TextBox();
-            this.CMP = new System.Windows.Forms.Button();
-            this.JMP = new System.Windows.Forms.Button();
-            this.CALL = new System.Windows.Forms.Button();
-            this.JNBE_JA = new System.Windows.Forms.Button();
-            this.JNB_JAE = new System.Windows.Forms.Button();
-            this.JNLE_JG = new System.Windows.Forms.Button();
-            this.JNL_JGE = new System.Windows.Forms.Button();
-            this.JNE_JNZ = new System.Windows.Forms.Button();
-            this.JBE_JNA = new System.Windows.Forms.Button();
-            this.JB_JNAF = new System.Windows.Forms.Button();
-            this.JLE_JNG = new System.Windows.Forms.Button();
-            this.JL_JNEG = new System.Windows.Forms.Button();
-            this.JE_JZ = new System.Windows.Forms.Button();
-            this.line5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.IRET = new System.Windows.Forms.Button();
-            this.RET = new System.Windows.Forms.Button();
-            this.INTO = new System.Windows.Forms.Button();
-            this.INT = new System.Windows.Forms.Button();
-            this.Line4 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.OUT = new System.Windows.Forms.Button();
-            this.IN = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.CMC = new System.Windows.Forms.Button();
             this.STI = new System.Windows.Forms.Button();
             this.STD = new System.Windows.Forms.Button();
@@ -70,15 +48,6 @@ namespace Intel_8086
             this.CLD = new System.Windows.Forms.Button();
             this.CLC = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TEST = new System.Windows.Forms.Button();
-            this.RCR = new System.Windows.Forms.Button();
-            this.RCL = new System.Windows.Forms.Button();
-            this.ROR = new System.Windows.Forms.Button();
-            this.ROL = new System.Windows.Forms.Button();
-            this.SAR = new System.Windows.Forms.Button();
-            this.SHR = new System.Windows.Forms.Button();
-            this.SAL = new System.Windows.Forms.Button();
-            this.SHL = new System.Windows.Forms.Button();
             this.XOR = new System.Windows.Forms.Button();
             this.OR = new System.Windows.Forms.Button();
             this.AND = new System.Windows.Forms.Button();
@@ -109,10 +78,21 @@ namespace Intel_8086
             this.SUB = new System.Windows.Forms.Button();
             this.ADD = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.Stack_box = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.flagsReg = new System.Windows.Forms.RichTextBox();
+            this.instructionsList = new System.Windows.Forms.RichTextBox();
+            this.info = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -125,36 +105,14 @@ namespace Intel_8086
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.Clear);
             this.tabPage1.Controls.Add(this.RUN);
             this.tabPage1.Controls.Add(this.Operation);
             this.tabPage1.Controls.Add(this.Instruction);
-            this.tabPage1.Controls.Add(this.CMP);
-            this.tabPage1.Controls.Add(this.JMP);
-            this.tabPage1.Controls.Add(this.CALL);
-            this.tabPage1.Controls.Add(this.JNBE_JA);
-            this.tabPage1.Controls.Add(this.JNB_JAE);
-            this.tabPage1.Controls.Add(this.JNLE_JG);
-            this.tabPage1.Controls.Add(this.JNL_JGE);
-            this.tabPage1.Controls.Add(this.JNE_JNZ);
-            this.tabPage1.Controls.Add(this.JBE_JNA);
-            this.tabPage1.Controls.Add(this.JB_JNAF);
-            this.tabPage1.Controls.Add(this.JLE_JNG);
-            this.tabPage1.Controls.Add(this.JL_JNEG);
-            this.tabPage1.Controls.Add(this.JE_JZ);
-            this.tabPage1.Controls.Add(this.line5);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.IRET);
-            this.tabPage1.Controls.Add(this.RET);
-            this.tabPage1.Controls.Add(this.INTO);
-            this.tabPage1.Controls.Add(this.INT);
-            this.tabPage1.Controls.Add(this.Line4);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.OUT);
-            this.tabPage1.Controls.Add(this.IN);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.CMC);
             this.tabPage1.Controls.Add(this.STI);
             this.tabPage1.Controls.Add(this.STD);
@@ -163,15 +121,6 @@ namespace Intel_8086
             this.tabPage1.Controls.Add(this.CLD);
             this.tabPage1.Controls.Add(this.CLC);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.TEST);
-            this.tabPage1.Controls.Add(this.RCR);
-            this.tabPage1.Controls.Add(this.RCL);
-            this.tabPage1.Controls.Add(this.ROR);
-            this.tabPage1.Controls.Add(this.ROL);
-            this.tabPage1.Controls.Add(this.SAR);
-            this.tabPage1.Controls.Add(this.SHR);
-            this.tabPage1.Controls.Add(this.SAL);
-            this.tabPage1.Controls.Add(this.SHL);
             this.tabPage1.Controls.Add(this.XOR);
             this.tabPage1.Controls.Add(this.OR);
             this.tabPage1.Controls.Add(this.AND);
@@ -205,6 +154,18 @@ namespace Intel_8086
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
@@ -222,18 +183,21 @@ namespace Intel_8086
             resources.ApplyResources(this.Clear, "Clear");
             this.Clear.Name = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // RUN
             // 
             resources.ApplyResources(this.RUN, "RUN");
             this.RUN.Name = "RUN";
             this.RUN.UseVisualStyleBackColor = true;
+            this.RUN.Click += new System.EventHandler(this.RUN_Click);
             // 
             // Operation
             // 
             this.Operation.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.Operation, "Operation");
             this.Operation.Name = "Operation";
+            this.Operation.TextChanged += new System.EventHandler(this.Operation_TextChanged);
             // 
             // Instruction
             // 
@@ -241,272 +205,89 @@ namespace Intel_8086
             resources.ApplyResources(this.Instruction, "Instruction");
             this.Instruction.Name = "Instruction";
             this.Instruction.ReadOnly = true;
-            // 
-            // CMP
-            // 
-            resources.ApplyResources(this.CMP, "CMP");
-            this.CMP.Name = "CMP";
-            this.CMP.UseVisualStyleBackColor = true;
-            // 
-            // JMP
-            // 
-            resources.ApplyResources(this.JMP, "JMP");
-            this.JMP.Name = "JMP";
-            this.JMP.UseVisualStyleBackColor = true;
-            // 
-            // CALL
-            // 
-            resources.ApplyResources(this.CALL, "CALL");
-            this.CALL.Name = "CALL";
-            this.CALL.UseVisualStyleBackColor = true;
-            // 
-            // JNBE_JA
-            // 
-            resources.ApplyResources(this.JNBE_JA, "JNBE_JA");
-            this.JNBE_JA.Name = "JNBE_JA";
-            this.JNBE_JA.UseVisualStyleBackColor = true;
-            // 
-            // JNB_JAE
-            // 
-            resources.ApplyResources(this.JNB_JAE, "JNB_JAE");
-            this.JNB_JAE.Name = "JNB_JAE";
-            this.JNB_JAE.UseVisualStyleBackColor = true;
-            // 
-            // JNLE_JG
-            // 
-            resources.ApplyResources(this.JNLE_JG, "JNLE_JG");
-            this.JNLE_JG.Name = "JNLE_JG";
-            this.JNLE_JG.UseVisualStyleBackColor = true;
-            // 
-            // JNL_JGE
-            // 
-            resources.ApplyResources(this.JNL_JGE, "JNL_JGE");
-            this.JNL_JGE.Name = "JNL_JGE";
-            this.JNL_JGE.UseVisualStyleBackColor = true;
-            // 
-            // JNE_JNZ
-            // 
-            resources.ApplyResources(this.JNE_JNZ, "JNE_JNZ");
-            this.JNE_JNZ.Name = "JNE_JNZ";
-            this.JNE_JNZ.UseVisualStyleBackColor = true;
-            // 
-            // JBE_JNA
-            // 
-            resources.ApplyResources(this.JBE_JNA, "JBE_JNA");
-            this.JBE_JNA.Name = "JBE_JNA";
-            this.JBE_JNA.UseVisualStyleBackColor = true;
-            // 
-            // JB_JNAF
-            // 
-            resources.ApplyResources(this.JB_JNAF, "JB_JNAF");
-            this.JB_JNAF.Name = "JB_JNAF";
-            this.JB_JNAF.UseVisualStyleBackColor = true;
-            // 
-            // JLE_JNG
-            // 
-            resources.ApplyResources(this.JLE_JNG, "JLE_JNG");
-            this.JLE_JNG.Name = "JLE_JNG";
-            this.JLE_JNG.UseVisualStyleBackColor = true;
-            // 
-            // JL_JNEG
-            // 
-            resources.ApplyResources(this.JL_JNEG, "JL_JNEG");
-            this.JL_JNEG.Name = "JL_JNEG";
-            this.JL_JNEG.UseVisualStyleBackColor = true;
-            // 
-            // JE_JZ
-            // 
-            resources.ApplyResources(this.JE_JZ, "JE_JZ");
-            this.JE_JZ.Name = "JE_JZ";
-            this.JE_JZ.UseVisualStyleBackColor = true;
-            // 
-            // line5
-            // 
-            this.line5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.line5, "line5");
-            this.line5.Name = "line5";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // IRET
-            // 
-            resources.ApplyResources(this.IRET, "IRET");
-            this.IRET.Name = "IRET";
-            this.IRET.UseVisualStyleBackColor = true;
-            // 
-            // RET
-            // 
-            resources.ApplyResources(this.RET, "RET");
-            this.RET.Name = "RET";
-            this.RET.UseVisualStyleBackColor = true;
-            // 
-            // INTO
-            // 
-            resources.ApplyResources(this.INTO, "INTO");
-            this.INTO.Name = "INTO";
-            this.INTO.UseVisualStyleBackColor = true;
-            // 
-            // INT
-            // 
-            resources.ApplyResources(this.INT, "INT");
-            this.INT.Name = "INT";
-            this.INT.UseVisualStyleBackColor = true;
-            // 
-            // Line4
-            // 
-            this.Line4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.Line4, "Line4");
-            this.Line4.Name = "Line4";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // OUT
-            // 
-            resources.ApplyResources(this.OUT, "OUT");
-            this.OUT.Name = "OUT";
-            this.OUT.UseVisualStyleBackColor = true;
-            // 
-            // IN
-            // 
-            resources.ApplyResources(this.IN, "IN");
-            this.IN.Name = "IN";
-            this.IN.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            this.Instruction.TextChanged += new System.EventHandler(this.Instruction_TextChanged);
             // 
             // CMC
             // 
             resources.ApplyResources(this.CMC, "CMC");
             this.CMC.Name = "CMC";
             this.CMC.UseVisualStyleBackColor = true;
+            this.CMC.Click += new System.EventHandler(this.CMC_Click);
             // 
             // STI
             // 
             resources.ApplyResources(this.STI, "STI");
             this.STI.Name = "STI";
             this.STI.UseVisualStyleBackColor = true;
+            this.STI.Click += new System.EventHandler(this.STI_Click);
             // 
             // STD
             // 
             resources.ApplyResources(this.STD, "STD");
             this.STD.Name = "STD";
             this.STD.UseVisualStyleBackColor = true;
+            this.STD.Click += new System.EventHandler(this.STD_Click);
             // 
             // STC
             // 
             resources.ApplyResources(this.STC, "STC");
             this.STC.Name = "STC";
             this.STC.UseVisualStyleBackColor = true;
+            this.STC.Click += new System.EventHandler(this.STC_Click);
             // 
             // CLI
             // 
             resources.ApplyResources(this.CLI, "CLI");
             this.CLI.Name = "CLI";
             this.CLI.UseVisualStyleBackColor = true;
+            this.CLI.Click += new System.EventHandler(this.CLI_Click);
             // 
             // CLD
             // 
             resources.ApplyResources(this.CLD, "CLD");
             this.CLD.Name = "CLD";
             this.CLD.UseVisualStyleBackColor = true;
+            this.CLD.Click += new System.EventHandler(this.CLD_Click);
             // 
             // CLC
             // 
             resources.ApplyResources(this.CLC, "CLC");
             this.CLC.Name = "CLC";
             this.CLC.UseVisualStyleBackColor = true;
+            this.CLC.Click += new System.EventHandler(this.CLC_Click);
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // TEST
-            // 
-            resources.ApplyResources(this.TEST, "TEST");
-            this.TEST.Name = "TEST";
-            this.TEST.UseVisualStyleBackColor = true;
-            // 
-            // RCR
-            // 
-            resources.ApplyResources(this.RCR, "RCR");
-            this.RCR.Name = "RCR";
-            this.RCR.UseVisualStyleBackColor = true;
-            // 
-            // RCL
-            // 
-            resources.ApplyResources(this.RCL, "RCL");
-            this.RCL.Name = "RCL";
-            this.RCL.UseVisualStyleBackColor = true;
-            // 
-            // ROR
-            // 
-            resources.ApplyResources(this.ROR, "ROR");
-            this.ROR.Name = "ROR";
-            this.ROR.UseVisualStyleBackColor = true;
-            // 
-            // ROL
-            // 
-            resources.ApplyResources(this.ROL, "ROL");
-            this.ROL.Name = "ROL";
-            this.ROL.UseVisualStyleBackColor = true;
-            // 
-            // SAR
-            // 
-            resources.ApplyResources(this.SAR, "SAR");
-            this.SAR.Name = "SAR";
-            this.SAR.UseVisualStyleBackColor = true;
-            // 
-            // SHR
-            // 
-            resources.ApplyResources(this.SHR, "SHR");
-            this.SHR.Name = "SHR";
-            this.SHR.UseVisualStyleBackColor = true;
-            // 
-            // SAL
-            // 
-            resources.ApplyResources(this.SAL, "SAL");
-            this.SAL.Name = "SAL";
-            this.SAL.UseVisualStyleBackColor = true;
-            // 
-            // SHL
-            // 
-            resources.ApplyResources(this.SHL, "SHL");
-            this.SHL.Name = "SHL";
-            this.SHL.UseVisualStyleBackColor = true;
-            // 
             // XOR
             // 
             resources.ApplyResources(this.XOR, "XOR");
             this.XOR.Name = "XOR";
             this.XOR.UseVisualStyleBackColor = true;
+            this.XOR.Click += new System.EventHandler(this.XOR_Click);
             // 
             // OR
             // 
             resources.ApplyResources(this.OR, "OR");
             this.OR.Name = "OR";
             this.OR.UseVisualStyleBackColor = true;
+            this.OR.Click += new System.EventHandler(this.OR_Click);
             // 
             // AND
             // 
             resources.ApplyResources(this.AND, "AND");
             this.AND.Name = "AND";
             this.AND.UseVisualStyleBackColor = true;
+            this.AND.Click += new System.EventHandler(this.AND_Click);
             // 
             // NOT
             // 
             resources.ApplyResources(this.NOT, "NOT");
             this.NOT.Name = "NOT";
             this.NOT.UseVisualStyleBackColor = true;
+            this.NOT.Click += new System.EventHandler(this.NOT_Click);
             // 
             // label3
             // 
@@ -524,24 +305,28 @@ namespace Intel_8086
             resources.ApplyResources(this.SAHF, "SAHF");
             this.SAHF.Name = "SAHF";
             this.SAHF.UseVisualStyleBackColor = true;
+            this.SAHF.Click += new System.EventHandler(this.SAHF_Click);
             // 
             // LAHF
             // 
             resources.ApplyResources(this.LAHF, "LAHF");
             this.LAHF.Name = "LAHF";
             this.LAHF.UseVisualStyleBackColor = true;
+            this.LAHF.Click += new System.EventHandler(this.LAHF_Click);
             // 
             // LEA
             // 
             resources.ApplyResources(this.LEA, "LEA");
             this.LEA.Name = "LEA";
             this.LEA.UseVisualStyleBackColor = true;
+            this.LEA.Click += new System.EventHandler(this.LEA_Click);
             // 
             // POPF
             // 
             resources.ApplyResources(this.POPF, "POPF");
             this.POPF.Name = "POPF";
             this.POPF.UseVisualStyleBackColor = true;
+            this.POPF.Click += new System.EventHandler(this.POPF_Click);
             // 
             // PUSHF
             // 
@@ -555,24 +340,28 @@ namespace Intel_8086
             resources.ApplyResources(this.POP, "POP");
             this.POP.Name = "POP";
             this.POP.UseVisualStyleBackColor = true;
+            this.POP.Click += new System.EventHandler(this.POP_Click);
             // 
             // PUSH
             // 
             resources.ApplyResources(this.PUSH, "PUSH");
             this.PUSH.Name = "PUSH";
             this.PUSH.UseVisualStyleBackColor = true;
+            this.PUSH.Click += new System.EventHandler(this.PUSH_Click);
             // 
             // XCHG
             // 
             resources.ApplyResources(this.XCHG, "XCHG");
             this.XCHG.Name = "XCHG";
             this.XCHG.UseVisualStyleBackColor = true;
+            this.XCHG.Click += new System.EventHandler(this.XCHG_Click);
             // 
             // MOV
             // 
             resources.ApplyResources(this.MOV, "MOV");
             this.MOV.Name = "MOV";
             this.MOV.UseVisualStyleBackColor = true;
+            this.MOV.Click += new System.EventHandler(this.MOV_Click);
             // 
             // label2
             // 
@@ -601,66 +390,107 @@ namespace Intel_8086
             resources.ApplyResources(this.IDIV, "IDIV");
             this.IDIV.Name = "IDIV";
             this.IDIV.UseVisualStyleBackColor = true;
+            this.IDIV.Click += new System.EventHandler(this.IDIV_Click);
             // 
             // IMUL
             // 
             resources.ApplyResources(this.IMUL, "IMUL");
             this.IMUL.Name = "IMUL";
             this.IMUL.UseVisualStyleBackColor = true;
+            this.IMUL.Click += new System.EventHandler(this.IMUL_Click);
             // 
             // AAS
             // 
             resources.ApplyResources(this.AAS, "AAS");
             this.AAS.Name = "AAS";
             this.AAS.UseVisualStyleBackColor = true;
+            this.AAS.Click += new System.EventHandler(this.AAS_Click);
             // 
             // AAA
             // 
             resources.ApplyResources(this.AAA, "AAA");
             this.AAA.Name = "AAA";
             this.AAA.UseVisualStyleBackColor = true;
+            this.AAA.Click += new System.EventHandler(this.AAA_Click);
             // 
             // DEC
             // 
             resources.ApplyResources(this.DEC, "DEC");
             this.DEC.Name = "DEC";
             this.DEC.UseVisualStyleBackColor = true;
+            this.DEC.Click += new System.EventHandler(this.DEC_Click);
             // 
             // INC
             // 
             resources.ApplyResources(this.INC, "INC");
             this.INC.Name = "INC";
             this.INC.UseVisualStyleBackColor = true;
+            this.INC.Click += new System.EventHandler(this.INC_Click);
             // 
             // DIV
             // 
             resources.ApplyResources(this.DIV, "DIV");
             this.DIV.Name = "DIV";
             this.DIV.UseVisualStyleBackColor = true;
+            this.DIV.Click += new System.EventHandler(this.DIV_Click);
             // 
             // MUL
             // 
             resources.ApplyResources(this.MUL, "MUL");
             this.MUL.Name = "MUL";
             this.MUL.UseVisualStyleBackColor = true;
+            this.MUL.Click += new System.EventHandler(this.MUL_Click);
             // 
             // SUB
             // 
             resources.ApplyResources(this.SUB, "SUB");
             this.SUB.Name = "SUB";
             this.SUB.UseVisualStyleBackColor = true;
+            this.SUB.Click += new System.EventHandler(this.SUB_Click);
             // 
             // ADD
             // 
             resources.ApplyResources(this.ADD, "ADD");
             this.ADD.Name = "ADD";
             this.ADD.UseVisualStyleBackColor = true;
+            this.ADD.Click += new System.EventHandler(this.ADD_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.instructionsList);
+            this.tabPage2.Controls.Add(this.groupBox1);
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.info);
+            this.groupBox1.Controls.Add(this.Logo);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label8);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // Logo
+            // 
+            resources.ApplyResources(this.Logo, "Logo");
+            this.Logo.Name = "Logo";
+            this.Logo.TabStop = false;
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(103)))), ((int)(((byte)(181)))));
+            this.label12.Name = "label12";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(65)))), ((int)(((byte)(125)))));
+            this.label8.Name = "label8";
             // 
             // Stack_box
             // 
@@ -668,17 +498,53 @@ namespace Intel_8086
             resources.ApplyResources(this.Stack_box, "Stack_box");
             this.Stack_box.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Stack_box.Name = "Stack_box";
+            this.Stack_box.ReadOnly = true;
+            this.Stack_box.TextChanged += new System.EventHandler(this.Stack_box_TextChanged);
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // flagsReg
+            // 
+            this.flagsReg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            resources.ApplyResources(this.flagsReg, "flagsReg");
+            this.flagsReg.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.flagsReg.Name = "flagsReg";
+            this.flagsReg.ReadOnly = true;
+            this.flagsReg.TextChanged += new System.EventHandler(this.flagsReg_TextChanged);
+            // 
+            // instructionsList
+            // 
+            this.instructionsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.instructionsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.instructionsList, "instructionsList");
+            this.instructionsList.ForeColor = System.Drawing.SystemColors.Window;
+            this.instructionsList.Name = "instructionsList";
+            this.instructionsList.ReadOnly = true;
+            this.instructionsList.ShortcutsEnabled = false;
+            // 
+            // info
+            // 
+            this.info.BackColor = System.Drawing.Color.GhostWhite;
+            this.info.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.info, "info");
+            this.info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(65)))), ((int)(((byte)(125)))));
+            this.info.Name = "info";
+            // 
             // Int_8086
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.flagsReg);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Stack_box);
             this.Controls.Add(this.tabControl1);
@@ -688,6 +554,10 @@ namespace Intel_8086
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,17 +597,7 @@ namespace Intel_8086
         private System.Windows.Forms.Button XOR;
         private System.Windows.Forms.Button OR;
         private System.Windows.Forms.Button AND;
-        private System.Windows.Forms.Button SAR;
-        private System.Windows.Forms.Button SHR;
-        private System.Windows.Forms.Button SAL;
-        private System.Windows.Forms.Button SHL;
-        private System.Windows.Forms.Button TEST;
-        private System.Windows.Forms.Button RCR;
-        private System.Windows.Forms.Button RCL;
-        private System.Windows.Forms.Button ROR;
-        private System.Windows.Forms.Button ROL;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button CLC;
         private System.Windows.Forms.Button STI;
         private System.Windows.Forms.Button STD;
@@ -745,29 +605,6 @@ namespace Intel_8086
         private System.Windows.Forms.Button CLI;
         private System.Windows.Forms.Button CLD;
         private System.Windows.Forms.Button CMC;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button OUT;
-        private System.Windows.Forms.Button IN;
-        private System.Windows.Forms.Label Line4;
-        private System.Windows.Forms.Button IRET;
-        private System.Windows.Forms.Button RET;
-        private System.Windows.Forms.Button INTO;
-        private System.Windows.Forms.Button INT;
-        private System.Windows.Forms.Label line5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button JMP;
-        private System.Windows.Forms.Button CALL;
-        private System.Windows.Forms.Button JNBE_JA;
-        private System.Windows.Forms.Button JNB_JAE;
-        private System.Windows.Forms.Button JNLE_JG;
-        private System.Windows.Forms.Button JNL_JGE;
-        private System.Windows.Forms.Button JNE_JNZ;
-        private System.Windows.Forms.Button JBE_JNA;
-        private System.Windows.Forms.Button JB_JNAF;
-        private System.Windows.Forms.Button JLE_JNG;
-        private System.Windows.Forms.Button JL_JNEG;
-        private System.Windows.Forms.Button JE_JZ;
-        private System.Windows.Forms.Button CMP;
         private System.Windows.Forms.TextBox Operation;
         private System.Windows.Forms.TextBox Instruction;
         private System.Windows.Forms.Button Clear;
@@ -776,6 +613,16 @@ namespace Intel_8086
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox Stack_box;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RichTextBox flagsReg;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RichTextBox instructionsList;
+        private System.Windows.Forms.RichTextBox info;
     }
 }
 
