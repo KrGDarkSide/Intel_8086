@@ -1,4 +1,4 @@
-# <img src = "https://user-images.githubusercontent.com/88212906/208240622-b7fbe3c2-4fc4-46a6-b454-93c21bba6338.png" alt = "logo"><div>Intel 8086<br><i>Symulation</i></div>
+# <img src = "https://user-images.githubusercontent.com/88212906/208240622-b7fbe3c2-4fc4-46a6-b454-93c21bba6338.png" alt = "logo"> Intel 8086 <i>Symulation</i>
 
 The application presents a simplified simulator of the Intel 8086 microprocessor from 1978.<br> 
 It has the basic instructions of this processor (MOV, ADD, SUB, PUSH, POP).<br>
